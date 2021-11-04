@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,15 @@
 		4D92CA4E2733AA6C004C4678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D92CA4C2733AA6C004C4678 /* LaunchScreen.storyboard */; };
 		4D92CA592733AA6C004C4678 /* YoriBangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA582733AA6C004C4678 /* YoriBangTests.swift */; };
 		4D92CA642733AA6C004C4678 /* YoriBangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA632733AA6C004C4678 /* YoriBangUITests.swift */; };
+		4D92CA7A2733AF86004C4678 /* Launches.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 4D92CA792733AF86004C4678 /* Launches.graphql */; };
+		4D92CA7C2733AFAA004C4678 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA7B2733AFAA004C4678 /* Network.swift */; };
+		4D92CA7E2733AFC4004C4678 /* RequestLoggingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA7D2733AFC4004C4678 /* RequestLoggingInterceptor.swift */; };
+		4D92CA802733AFE8004C4678 /* ResponseLoggingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA7F2733AFE8004C4678 /* ResponseLoggingInterceptor.swift */; };
+		4D92CA822733AFFC004C4678 /* NetworkInterceptorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA812733AFFC004C4678 /* NetworkInterceptorProvider.swift */; };
+		4D92CA842733B010004C4678 /* UserManagementInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA832733B010004C4678 /* UserManagementInterceptor.swift */; };
+		4D92CA8B2733B38D004C4678 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA8A2733B38D004C4678 /* UIViewController + Extension.swift */; };
+		4D92CA8D2733B43A004C4678 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D92CA8C2733B43A004C4678 /* schema.json */; };
+		4D92CA902733B5C5004C4678 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA8F2733B5C5004C4678 /* API.swift */; };
 		77B785E45AAE30ED4B8F86C3 /* Pods_YoriBang_YoriBangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B4497B0D3B70B3B85CDB89 /* Pods_YoriBang_YoriBangUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +67,15 @@
 		4D92CA5F2733AA6C004C4678 /* YoriBangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoriBangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D92CA632733AA6C004C4678 /* YoriBangUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoriBangUITests.swift; sourceTree = "<group>"; };
 		4D92CA652733AA6C004C4678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D92CA792733AF86004C4678 /* Launches.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Launches.graphql; sourceTree = "<group>"; };
+		4D92CA7B2733AFAA004C4678 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		4D92CA7D2733AFC4004C4678 /* RequestLoggingInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLoggingInterceptor.swift; sourceTree = "<group>"; };
+		4D92CA7F2733AFE8004C4678 /* ResponseLoggingInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseLoggingInterceptor.swift; sourceTree = "<group>"; };
+		4D92CA812733AFFC004C4678 /* NetworkInterceptorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterceptorProvider.swift; sourceTree = "<group>"; };
+		4D92CA832733B010004C4678 /* UserManagementInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagementInterceptor.swift; sourceTree = "<group>"; };
+		4D92CA8A2733B38D004C4678 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		4D92CA8C2733B43A004C4678 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		4D92CA8F2733B5C5004C4678 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		50757FA73B1A3D8F8D55A0AB /* Pods-YoriBang-YoriBangUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoriBang-YoriBangUITests.debug.xcconfig"; path = "Target Support Files/Pods-YoriBang-YoriBangUITests/Pods-YoriBang-YoriBangUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		968571D977D0DC896529D315 /* Pods-YoriBang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoriBang.debug.xcconfig"; path = "Target Support Files/Pods-YoriBang/Pods-YoriBang.debug.xcconfig"; sourceTree = "<group>"; };
 		A0E54003ACD0EAA26D1930EB /* Pods_YoriBang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoriBang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,13 +149,15 @@
 		4D92CA3D2733AA6B004C4678 /* YoriBang */ = {
 			isa = PBXGroup;
 			children = (
+				4D92CA882733B1FA004C4678 /* Font */,
 				4D92CA712733AB75004C4678 /* Storyboard */,
-				4D92CA722733AB7F004C4678 /* ViewController */,
-				4D92CA732733AB8A004C4678 /* Extension */,
 				4D92CA742733AB8F004C4678 /* GQL */,
+				4D92CA722733AB7F004C4678 /* ViewController */,
+				4D92CA862733B1C6004C4678 /* Model */,
+				4D92CA872733B1CD004C4678 /* Realm */,
 				4D92CA762733ABB8004C4678 /* Util */,
-				4D92CA3E2733AA6B004C4678 /* AppDelegate.swift */,
-				4D92CA402733AA6B004C4678 /* SceneDelegate.swift */,
+				4D92CA732733AB8A004C4678 /* Extension */,
+				4D92CA892733B22D004C4678 /* Delegate */,
 				4D92CA4A2733AA6C004C4678 /* Assets.xcassets */,
 				4D92CA4C2733AA6C004C4678 /* LaunchScreen.storyboard */,
 				4D92CA4F2733AA6C004C4678 /* Info.plist */,
@@ -183,6 +203,7 @@
 		4D92CA732733AB8A004C4678 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				4D92CA8A2733B38D004C4678 /* UIViewController + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -190,6 +211,10 @@
 		4D92CA742733AB8F004C4678 /* GQL */ = {
 			isa = PBXGroup;
 			children = (
+				4D92CA8F2733B5C5004C4678 /* API.swift */,
+				4D92CA792733AF86004C4678 /* Launches.graphql */,
+				4D92CA7B2733AFAA004C4678 /* Network.swift */,
+				4D92CA8C2733B43A004C4678 /* schema.json */,
 				4D92CA752733ABB0004C4678 /* API */,
 			);
 			path = GQL;
@@ -198,6 +223,10 @@
 		4D92CA752733ABB0004C4678 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				4D92CA7D2733AFC4004C4678 /* RequestLoggingInterceptor.swift */,
+				4D92CA7F2733AFE8004C4678 /* ResponseLoggingInterceptor.swift */,
+				4D92CA812733AFFC004C4678 /* NetworkInterceptorProvider.swift */,
+				4D92CA832733B010004C4678 /* UserManagementInterceptor.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -207,6 +236,36 @@
 			children = (
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		4D92CA862733B1C6004C4678 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4D92CA872733B1CD004C4678 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		4D92CA882733B1FA004C4678 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		4D92CA892733B22D004C4678 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				4D92CA3E2733AA6B004C4678 /* AppDelegate.swift */,
+				4D92CA402733AA6B004C4678 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		725F742820C6AD5816EAD456 /* Frameworks */ = {
@@ -230,6 +289,8 @@
 				4D92CA372733AA6B004C4678 /* Sources */,
 				4D92CA382733AA6B004C4678 /* Frameworks */,
 				4D92CA392733AA6B004C4678 /* Resources */,
+				884F7F5658C5738A8EAE72BA /* [CP] Embed Pods Frameworks */,
+				4D92CA8E2733B452004C4678 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -267,6 +328,7 @@
 				4D92CA5B2733AA6C004C4678 /* Sources */,
 				4D92CA5C2733AA6C004C4678 /* Frameworks */,
 				4D92CA5D2733AA6C004C4678 /* Resources */,
+				F604E908F7DCDE8238C52771 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -325,6 +387,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D92CA7A2733AF86004C4678 /* Launches.graphql in Resources */,
+				4D92CA8D2733B43A004C4678 /* schema.json in Resources */,
 				4D92CA4E2733AA6C004C4678 /* LaunchScreen.storyboard in Resources */,
 				4D92CA4B2733AA6C004C4678 /* Assets.xcassets in Resources */,
 				4D92CA462733AA6B004C4678 /* Main.storyboard in Resources */,
@@ -348,6 +412,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4D92CA8E2733B452004C4678 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/YoriBang/GQL/*.graphql",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/YoriBang/API.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"/GQL/\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n";
+		};
 		5794AE9D78221AA9E6641E64 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -414,6 +497,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		884F7F5658C5738A8EAE72BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YoriBang/Pods-YoriBang-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YoriBang/Pods-YoriBang-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YoriBang/Pods-YoriBang-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F604E908F7DCDE8238C52771 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YoriBang-YoriBangUITests/Pods-YoriBang-YoriBangUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YoriBang-YoriBangUITests/Pods-YoriBang-YoriBangUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YoriBang-YoriBangUITests/Pods-YoriBang-YoriBangUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -421,9 +538,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D92CA902733B5C5004C4678 /* API.swift in Sources */,
+				4D92CA802733AFE8004C4678 /* ResponseLoggingInterceptor.swift in Sources */,
+				4D92CA7C2733AFAA004C4678 /* Network.swift in Sources */,
+				4D92CA7E2733AFC4004C4678 /* RequestLoggingInterceptor.swift in Sources */,
 				4D92CA492733AA6B004C4678 /* YoriBang.xcdatamodeld in Sources */,
 				4D92CA432733AA6B004C4678 /* ViewController.swift in Sources */,
+				4D92CA842733B010004C4678 /* UserManagementInterceptor.swift in Sources */,
+				4D92CA8B2733B38D004C4678 /* UIViewController + Extension.swift in Sources */,
 				4D92CA3F2733AA6B004C4678 /* AppDelegate.swift in Sources */,
+				4D92CA822733AFFC004C4678 /* NetworkInterceptorProvider.swift in Sources */,
 				4D92CA412733AA6B004C4678 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -604,6 +728,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2KQLD72485;
 				INFOPLIST_FILE = YoriBang/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -611,7 +736,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wi-seong.YoriBang";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -624,6 +749,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2KQLD72485;
 				INFOPLIST_FILE = YoriBang/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -631,7 +757,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wi-seong.YoriBang";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
