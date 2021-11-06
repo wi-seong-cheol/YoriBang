@@ -37,63 +37,58 @@
             </objects>
             <point key="canvasLocation" x="-2729" y="2090"/>
         </scene>
-        <!--Item-->
+        <!--Journal View Controller-->
         <scene sceneID="lJ5-te-ulC">
             <objects>
-                <viewController id="VLP-Jo-bNL" customClass="ViewController2" customModule="YoriBang" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VLP-Jo-bNL" customClass="JournalViewController" customModule="YoriBang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Keo-qI-a56">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="JfO-h6-fEa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="archivebox" catalog="system" id="ZbQ-5O-pE3">
-                        <inset key="landscapeImageInsets" minX="20" minY="0.0" maxX="-20" maxY="0.0"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="-20" vertical="0.0"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="oLE-N2-huW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2d-Ek-ueZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4073.913043478261" y="3565.8482142857142"/>
+            <point key="canvasLocation" x="-4074" y="4418"/>
         </scene>
-        <!--Item-->
+        <!--Feed View Controller-->
         <scene sceneID="qe9-oj-yl8">
             <objects>
-                <viewController id="XY9-yk-5pd" sceneMemberID="viewController">
+                <viewController id="XY9-yk-5pd" customClass="FeedViewController" customModule="YoriBang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P4n-Mx-xSZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="rkN-Lf-aal"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="archivebox" catalog="system" id="7VH-7U-dIw">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="20" vertical="0.0"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="SVf-1t-oZW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzj-iv-qYx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3036.2318840579715" y="3565.8482142857142"/>
+            <point key="canvasLocation" x="-2900" y="4418"/>
         </scene>
-        <!--Item-->
+        <!--My Room View Controller-->
         <scene sceneID="CqP-a9-2Uy">
             <objects>
-                <viewController id="nIm-ua-aLi" sceneMemberID="viewController">
+                <viewController id="nIm-ua-aLi" customClass="MyRoomViewController" customModule="YoriBang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pWN-Og-XxL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="U4T-ZS-3hV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="archivebox" catalog="system" id="VPp-TG-csX"/>
+                    <navigationItem key="navigationItem" id="45j-ct-DQH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IOR-qJ-e6B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2223.1884057971015" y="3565.8482142857142"/>
+            <point key="canvasLocation" x="-1736" y="4418"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipe View Controller-->
         <scene sceneID="TWf-ob-JUH">
             <objects>
-                <viewController id="rI4-bd-xSB" customClass="ViewController" customModule="YoriBang" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rI4-bd-xSB" customClass="RecipeViewController" customModule="YoriBang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gmU-Dm-8fq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -264,9 +259,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="c1V-Am-2Li" kind="relationship" relationship="viewControllers" id="fRR-bG-kaq"/>
-                        <segue destination="VLP-Jo-bNL" kind="relationship" relationship="viewControllers" id="hJ5-cN-Vk9"/>
-                        <segue destination="XY9-yk-5pd" kind="relationship" relationship="viewControllers" id="vLw-45-qel"/>
-                        <segue destination="nIm-ua-aLi" kind="relationship" relationship="viewControllers" id="b0T-B7-Ydg"/>
+                        <segue destination="GU0-ij-iuc" kind="relationship" relationship="viewControllers" id="hJ5-cN-Vk9"/>
+                        <segue destination="b5f-dn-98h" kind="relationship" relationship="viewControllers" id="vLw-45-qel"/>
+                        <segue destination="GYB-iz-sLh" kind="relationship" relationship="viewControllers" id="b0T-B7-Ydg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ia-do-c27" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -364,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ei-aa-B2c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3749" y="5021"/>
+            <point key="canvasLocation" x="-3978" y="5385"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="Bfn-7n-2S0">
@@ -418,6 +413,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="gbA-61-fWj"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="jJb-bN-oNI" firstAttribute="centerY" secondItem="tnU-W1-m1t" secondAttribute="centerY" id="6Su-QU-oyL"/>
@@ -467,6 +463,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Eup-KA-7K8"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="whO-22-VtH" firstAttribute="leading" secondItem="VHj-4E-Smc" secondAttribute="leading" constant="20" symbolic="YES" id="5Ga-Nw-XRw"/>
@@ -514,6 +511,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Esb-ob-4Qo"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="FAy-fo-p3S" secondAttribute="trailing" priority="250" constant="344" id="1Ho-Tu-HlV"/>
@@ -533,6 +531,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZfM-Nj-hAs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4926.0869565217399" y="4873.6607142857138"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="5tY-52-PNy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GU0-ij-iuc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="archivebox" catalog="system" id="ZbQ-5O-pE3">
+                        <inset key="landscapeImageInsets" minX="20" minY="0.0" maxX="-20" maxY="0.0"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="-20" vertical="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JRy-CK-ker">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VLP-Jo-bNL" kind="relationship" relationship="rootViewController" id="IGn-KJ-jsZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BJf-aa-H28" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4073.913043478261" y="3565.8482142857142"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="cY1-wm-23g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b5f-dn-98h" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="archivebox" catalog="system" id="7VH-7U-dIw">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="20" vertical="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gsz-RI-a30">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XY9-yk-5pd" kind="relationship" relationship="rootViewController" id="ie0-RF-rBr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Bl-ta-beN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2900" y="3565.8482142857142"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="uHq-CD-Auo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GYB-iz-sLh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="archivebox" catalog="system" id="VPp-TG-csX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JVJ-nS-Ra7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nIm-ua-aLi" kind="relationship" relationship="rootViewController" id="zDk-7t-ywJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KwU-dB-ncP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1736.2318840579712" y="3565.8482142857142"/>
         </scene>
     </scenes>
     <designables>

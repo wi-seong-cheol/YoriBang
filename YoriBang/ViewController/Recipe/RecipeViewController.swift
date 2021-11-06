@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RecipeViewController: UIViewController {
     
     @IBOutlet weak var AddBtnView: UIView!
     @IBOutlet weak var AddBackgroundView: UIView!

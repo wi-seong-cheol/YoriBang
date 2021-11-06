@@ -13,7 +13,7 @@
 		4D029F4A2735476A009AB8C6 /* CALayer + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D029F492735476A009AB8C6 /* CALayer + Extension.swift */; };
 		4D92CA3F2733AA6B004C4678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA3E2733AA6B004C4678 /* AppDelegate.swift */; };
 		4D92CA412733AA6B004C4678 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA402733AA6B004C4678 /* SceneDelegate.swift */; };
-		4D92CA432733AA6B004C4678 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA422733AA6B004C4678 /* ViewController.swift */; };
+		4D92CA432733AA6B004C4678 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA422733AA6B004C4678 /* RecipeViewController.swift */; };
 		4D92CA462733AA6B004C4678 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D92CA442733AA6B004C4678 /* Main.storyboard */; };
 		4D92CA492733AA6B004C4678 /* YoriBang.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA472733AA6B004C4678 /* YoriBang.xcdatamodeld */; };
 		4D92CA4B2733AA6C004C4678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D92CA4A2733AA6C004C4678 /* Assets.xcassets */; };
@@ -31,9 +31,9 @@
 		4D92CA902733B5C5004C4678 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA8F2733B5C5004C4678 /* API.swift */; };
 		4D92CA942733C0AF004C4678 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA932733C0AF004C4678 /* BottomSheetViewController.swift */; };
 		4D92CA9627340DF3004C4678 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA9527340DF3004C4678 /* TabBarViewController.swift */; };
-		4D92CA9A27342B7F004C4678 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA9927342B7F004C4678 /* ViewController2.swift */; };
-		4D92CA9E27342BB5004C4678 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA9D27342BB5004C4678 /* ViewController4.swift */; };
-		4D92CAA027342BBA004C4678 /* ViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA9F27342BBA004C4678 /* ViewController5.swift */; };
+		4D92CA9A27342B7F004C4678 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA9927342B7F004C4678 /* JournalViewController.swift */; };
+		4D92CA9E27342BB5004C4678 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA9D27342BB5004C4678 /* FeedViewController.swift */; };
+		4D92CAA027342BBA004C4678 /* MyRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA9F27342BBA004C4678 /* MyRoomViewController.swift */; };
 		4DA85E7727356DD800060CFF /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA85E7627356DD800060CFF /* AddViewController.swift */; };
 		4DBB7D2027350E3E009F03D2 /* CustomizedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBB7D1F27350E3E009F03D2 /* CustomizedTabBar.swift */; };
 		77B785E45AAE30ED4B8F86C3 /* Pods_YoriBang_YoriBangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B4497B0D3B70B3B85CDB89 /* Pods_YoriBang_YoriBangUITests.framework */; };
@@ -66,7 +66,7 @@
 		4D92CA3B2733AA6B004C4678 /* YoriBang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoriBang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D92CA3E2733AA6B004C4678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D92CA402733AA6B004C4678 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4D92CA422733AA6B004C4678 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D92CA422733AA6B004C4678 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		4D92CA452733AA6B004C4678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D92CA482733AA6B004C4678 /* YoriBang.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YoriBang.xcdatamodel; sourceTree = "<group>"; };
 		4D92CA4A2733AA6C004C4678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,9 +89,9 @@
 		4D92CA8F2733B5C5004C4678 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4D92CA932733C0AF004C4678 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		4D92CA9527340DF3004C4678 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		4D92CA9927342B7F004C4678 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
-		4D92CA9D27342BB5004C4678 /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
-		4D92CA9F27342BBA004C4678 /* ViewController5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController5.swift; sourceTree = "<group>"; };
+		4D92CA9927342B7F004C4678 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
+		4D92CA9D27342BB5004C4678 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		4D92CA9F27342BBA004C4678 /* MyRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRoomViewController.swift; sourceTree = "<group>"; };
 		4DA85E7627356DD800060CFF /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		4DBB7D1F27350E3E009F03D2 /* CustomizedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedTabBar.swift; sourceTree = "<group>"; };
 		50757FA73B1A3D8F8D55A0AB /* Pods-YoriBang-YoriBangUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoriBang-YoriBangUITests.debug.xcconfig"; path = "Target Support Files/Pods-YoriBang-YoriBangUITests/Pods-YoriBang-YoriBangUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 		4D21DE002736581E003AD06B /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
-				4D92CA422733AA6B004C4678 /* ViewController.swift */,
+				4D92CA422733AA6B004C4678 /* RecipeViewController.swift */,
 			);
 			path = Recipe;
 			sourceTree = "<group>";
@@ -153,7 +153,7 @@
 		4D21DE0127365823003AD06B /* Journal */ = {
 			isa = PBXGroup;
 			children = (
-				4D92CA9927342B7F004C4678 /* ViewController2.swift */,
+				4D92CA9927342B7F004C4678 /* JournalViewController.swift */,
 			);
 			path = Journal;
 			sourceTree = "<group>";
@@ -161,7 +161,7 @@
 		4D21DE0227365830003AD06B /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				4D92CA9D27342BB5004C4678 /* ViewController4.swift */,
+				4D92CA9D27342BB5004C4678 /* FeedViewController.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -169,7 +169,7 @@
 		4D21DE0327365834003AD06B /* MyRoom */ = {
 			isa = PBXGroup;
 			children = (
-				4D92CA9F27342BBA004C4678 /* ViewController5.swift */,
+				4D92CA9F27342BBA004C4678 /* MyRoomViewController.swift */,
 			);
 			path = MyRoom;
 			sourceTree = "<group>";
@@ -618,15 +618,15 @@
 				4DA85E7727356DD800060CFF /* AddViewController.swift in Sources */,
 				4DBB7D2027350E3E009F03D2 /* CustomizedTabBar.swift in Sources */,
 				4D92CA7C2733AFAA004C4678 /* Network.swift in Sources */,
-				4D92CA9E27342BB5004C4678 /* ViewController4.swift in Sources */,
+				4D92CA9E27342BB5004C4678 /* FeedViewController.swift in Sources */,
 				4D92CA7E2733AFC4004C4678 /* RequestLoggingInterceptor.swift in Sources */,
 				4D92CA492733AA6B004C4678 /* YoriBang.xcdatamodeld in Sources */,
-				4D92CA432733AA6B004C4678 /* ViewController.swift in Sources */,
+				4D92CA432733AA6B004C4678 /* RecipeViewController.swift in Sources */,
 				4D92CA842733B010004C4678 /* UserManagementInterceptor.swift in Sources */,
 				4D029F48273545AA009AB8C6 /* UIColor + Extension.swift in Sources */,
-				4D92CA9A27342B7F004C4678 /* ViewController2.swift in Sources */,
+				4D92CA9A27342B7F004C4678 /* JournalViewController.swift in Sources */,
 				4D92CA8B2733B38D004C4678 /* UIViewController + Extension.swift in Sources */,
-				4D92CAA027342BBA004C4678 /* ViewController5.swift in Sources */,
+				4D92CAA027342BBA004C4678 /* MyRoomViewController.swift in Sources */,
 				4D92CA3F2733AA6B004C4678 /* AppDelegate.swift in Sources */,
 				4D92CA942733C0AF004C4678 /* BottomSheetViewController.swift in Sources */,
 				4D92CA9627340DF3004C4678 /* TabBarViewController.swift in Sources */,
