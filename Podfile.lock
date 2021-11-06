@@ -5,6 +5,36 @@ PODS:
     - SQLite.swift (~> 0.12.2)
   - Apollo/WebSocket (0.49.1):
     - Apollo/Core
+  - MaterialComponents/Availability (124.2.0)
+  - MaterialComponents/BottomSheet (124.2.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/private/KeyboardWatcher
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/ShapeLibrary
+    - MaterialComponents/Shapes
+  - MaterialComponents/Elevation (124.2.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (124.2.0)
+  - MaterialComponents/private/Color (124.2.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/KeyboardWatcher (124.2.0):
+    - MaterialComponents/private/Application
+  - MaterialComponents/private/Math (124.2.0)
+  - MaterialComponents/ShadowElevations (124.2.0)
+  - MaterialComponents/ShadowLayer (124.2.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/ShapeLibrary (124.2.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/Shapes
+  - MaterialComponents/Shapes (124.2.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - RAMAnimatedTabBarController (5.2.0)
   - SQLite.swift (0.12.2):
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
@@ -12,16 +42,22 @@ PODS:
 DEPENDENCIES:
   - Apollo/SQLite
   - Apollo/WebSocket
+  - MaterialComponents/BottomSheet
+  - RAMAnimatedTabBarController
 
 SPEC REPOS:
   trunk:
     - Apollo
+    - MaterialComponents
+    - RAMAnimatedTabBarController
     - SQLite.swift
 
 SPEC CHECKSUMS:
   Apollo: 69f35ed8f8d87c32ef89e99e4f8c682399e9192b
+  MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
+  RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
 
-PODFILE CHECKSUM: 46de3fb01a4bb25167ce78e34d37a00b5e826934
+PODFILE CHECKSUM: 5fab5cea224f7cbca2cbce5ff5ccb3a3c38bec2b
 
 COCOAPODS: 1.10.1

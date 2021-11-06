@@ -11,6 +11,12 @@ target 'YoriBang' do
   pod "Apollo/SQLite"
   pod "Apollo/WebSocket"
   
+  # Pods for BottomSheet
+  pod 'MaterialComponents/BottomSheet'
+  
+  # Pods for TabBarAnimation
+  pod 'RAMAnimatedTabBarController'
+  
   target 'YoriBangTests' do
     inherit! :search_paths
     # Pods for testing
