@@ -32,7 +32,6 @@
 		4D92CA942733C0AF004C4678 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA932733C0AF004C4678 /* BottomSheetViewController.swift */; };
 		4D92CA9627340DF3004C4678 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA9527340DF3004C4678 /* TabBarViewController.swift */; };
 		4D92CA9A27342B7F004C4678 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA9927342B7F004C4678 /* ViewController2.swift */; };
-		4D92CA9C27342BA2004C4678 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA9B27342BA2004C4678 /* ViewController3.swift */; };
 		4D92CA9E27342BB5004C4678 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA9D27342BB5004C4678 /* ViewController4.swift */; };
 		4D92CAA027342BBA004C4678 /* ViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA9F27342BBA004C4678 /* ViewController5.swift */; };
 		4DA85E7727356DD800060CFF /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA85E7627356DD800060CFF /* AddViewController.swift */; };
@@ -91,7 +90,6 @@
 		4D92CA932733C0AF004C4678 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		4D92CA9527340DF3004C4678 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		4D92CA9927342B7F004C4678 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
-		4D92CA9B27342BA2004C4678 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		4D92CA9D27342BB5004C4678 /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 		4D92CA9F27342BBA004C4678 /* ViewController5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController5.swift; sourceTree = "<group>"; };
 		4DA85E7627356DD800060CFF /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
@@ -144,30 +142,34 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		4D21DDFC2736536D003AD06B /* Recipe */ = {
+		4D21DE002736581E003AD06B /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
+				4D92CA422733AA6B004C4678 /* ViewController.swift */,
 			);
 			path = Recipe;
 			sourceTree = "<group>";
 		};
-		4D21DDFD273653C5003AD06B /* Journal */ = {
+		4D21DE0127365823003AD06B /* Journal */ = {
 			isa = PBXGroup;
 			children = (
+				4D92CA9927342B7F004C4678 /* ViewController2.swift */,
 			);
 			path = Journal;
 			sourceTree = "<group>";
 		};
-		4D21DDFE273653D2003AD06B /* Feed */ = {
+		4D21DE0227365830003AD06B /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				4D92CA9D27342BB5004C4678 /* ViewController4.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
 		};
-		4D21DDFF273653DB003AD06B /* MyRoom */ = {
+		4D21DE0327365834003AD06B /* MyRoom */ = {
 			isa = PBXGroup;
 			children = (
+				4D92CA9F27342BBA004C4678 /* ViewController5.swift */,
 			);
 			path = MyRoom;
 			sourceTree = "<group>";
@@ -243,17 +245,12 @@
 		4D92CA722733AB7F004C4678 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4D92CA422733AA6B004C4678 /* ViewController.swift */,
-				4D92CA9927342B7F004C4678 /* ViewController2.swift */,
-				4D92CA9B27342BA2004C4678 /* ViewController3.swift */,
-				4D92CA9D27342BB5004C4678 /* ViewController4.swift */,
-				4D92CA9F27342BBA004C4678 /* ViewController5.swift */,
-				4D21DDFF273653DB003AD06B /* MyRoom */,
-				4D21DDFE273653D2003AD06B /* Feed */,
-				4D21DDFD273653C5003AD06B /* Journal */,
 				4D92CA9727341041004C4678 /* TabBar */,
-				4D21DDFC2736536D003AD06B /* Recipe */,
 				4D92CA9827341046004C4678 /* Add */,
+				4D21DE002736581E003AD06B /* Recipe */,
+				4D21DE0127365823003AD06B /* Journal */,
+				4D21DE0227365830003AD06B /* Feed */,
+				4D21DE0327365834003AD06B /* MyRoom */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -624,7 +621,6 @@
 				4D92CA9E27342BB5004C4678 /* ViewController4.swift in Sources */,
 				4D92CA7E2733AFC4004C4678 /* RequestLoggingInterceptor.swift in Sources */,
 				4D92CA492733AA6B004C4678 /* YoriBang.xcdatamodeld in Sources */,
-				4D92CA9C27342BA2004C4678 /* ViewController3.swift in Sources */,
 				4D92CA432733AA6B004C4678 /* ViewController.swift in Sources */,
 				4D92CA842733B010004C4678 /* UserManagementInterceptor.swift in Sources */,
 				4D029F48273545AA009AB8C6 /* UIColor + Extension.swift in Sources */,
