@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ud2-7U-a7N">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="ENe-pT-xuY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ud2-7U-a7N" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="archivebox" catalog="system" id="GQY-d6-W84">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="20" vertical="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q9P-LO-EGb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="loh-QQ-cYp" kind="relationship" relationship="rootViewController" id="2vM-Wr-Wh0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eTI-u1-neA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2900" y="3565.8482142857142"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="5lI-07-4U1">
+            <objects>
+                <viewController storyboardIdentifier="FeedViewController" id="loh-QQ-cYp" customClass="FeedViewController" customModule="YoriBang" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zAf-vv-zGB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5F-Yc-kKE">
+                                <rect key="frame" x="188" y="800" width="38" height="38"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="9dz-GS-urh"/>
+                                    <constraint firstAttribute="height" constant="38" id="bto-hd-Lf0"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="MHf-da-uxZ">
+                                <rect key="frame" x="132.5" y="738" width="149" height="79"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pm-WW-KcR">
+                                        <rect key="frame" x="48.5" y="0.0" width="52" height="30"/>
+                                        <state key="normal" title="요리일지">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="qTP-mO-pdp">
+                                        <rect key="frame" x="0.0" y="49" width="149" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USf-T8-bGg">
+                                                <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
+                                                <state key="normal" title="레시피">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rP5-iB-Efb">
+                                                <rect key="frame" x="119" y="0.0" width="30" height="30"/>
+                                                <state key="normal" title="피드">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xw-xw-OjN">
+                                <rect key="frame" x="160.5" y="772.5" width="93" height="93.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIF-BC-sTS">
+                                        <rect key="frame" x="26.5" y="27" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="4fz-bd-Q7E"/>
+                                        </constraints>
+                                        <state key="normal" image="add_orange_asset"/>
+                                        <connections>
+                                            <action selector="AddBtn:" destination="loh-QQ-cYp" eventType="touchUpInside" id="G7v-Mp-LKZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4xw-xw-OjN" secondAttribute="height" multiplier="1:1" id="88A-SC-6pA"/>
+                                    <constraint firstItem="rIF-BC-sTS" firstAttribute="height" secondItem="4xw-xw-OjN" secondAttribute="height" multiplier="0.428571" id="Abe-6b-pcs"/>
+                                    <constraint firstItem="rIF-BC-sTS" firstAttribute="centerX" secondItem="4xw-xw-OjN" secondAttribute="centerX" id="Ocf-cc-UI8"/>
+                                    <constraint firstItem="rIF-BC-sTS" firstAttribute="centerY" secondItem="4xw-xw-OjN" secondAttribute="centerY" id="kTn-N1-kYh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VbT-1u-BQl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4xw-xw-OjN" firstAttribute="centerX" secondItem="zAf-vv-zGB" secondAttribute="centerX" id="6ZY-z8-Qd6"/>
+                            <constraint firstItem="p5F-Yc-kKE" firstAttribute="centerX" secondItem="zAf-vv-zGB" secondAttribute="centerX" id="7IQ-Kx-LuU"/>
+                            <constraint firstAttribute="bottom" secondItem="MHf-da-uxZ" secondAttribute="bottom" constant="79" id="Agm-5x-Ltb"/>
+                            <constraint firstAttribute="bottom" secondItem="p5F-Yc-kKE" secondAttribute="bottom" constant="58" id="Hj8-9c-aZe"/>
+                            <constraint firstAttribute="bottom" secondItem="4xw-xw-OjN" secondAttribute="bottom" constant="30" id="Qiq-dw-o2Z"/>
+                            <constraint firstItem="MHf-da-uxZ" firstAttribute="centerX" secondItem="VbT-1u-BQl" secondAttribute="centerX" id="RAS-1R-9K3"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" image="archivebox" catalog="system" id="Tsg-tT-sp0"/>
+                    <navigationItem key="navigationItem" id="gN5-Xx-fs7"/>
+                    <connections>
+                        <outlet property="AddBackgroundView" destination="p5F-Yc-kKE" id="Tjy-rc-WCh"/>
+                        <outlet property="AddBtn" destination="rIF-BC-sTS" id="SMj-Y8-QKd"/>
+                        <outlet property="AddBtnView" destination="4xw-xw-OjN" id="9Ck-mG-lug"/>
+                        <outletCollection property="AddItem" destination="9pm-WW-KcR" collectionClass="NSMutableArray" id="vQD-rC-FOp"/>
+                        <outletCollection property="AddItem" destination="USf-T8-bGg" collectionClass="NSMutableArray" id="c4F-cF-QbF"/>
+                        <outletCollection property="AddItem" destination="rP5-iB-Efb" collectionClass="NSMutableArray" id="2Yx-ww-5gP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hZz-Bf-sSG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2900" y="4418"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add_orange_asset" width="40" height="40"/>
+        <image name="archivebox" catalog="system" width="128" height="106"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

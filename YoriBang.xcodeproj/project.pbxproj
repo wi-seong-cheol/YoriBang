@@ -11,6 +11,12 @@
 		2F658BEE65C10A605B592763 /* Pods_YoriBang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E54003ACD0EAA26D1930EB /* Pods_YoriBang.framework */; };
 		4D029F48273545AA009AB8C6 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D029F47273545AA009AB8C6 /* UIColor + Extension.swift */; };
 		4D029F4A2735476A009AB8C6 /* CALayer + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D029F492735476A009AB8C6 /* CALayer + Extension.swift */; };
+		4D0E25F827366A2E0053C272 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D0E25F727366A2E0053C272 /* Menu.storyboard */; };
+		4D15977627366A8400A430DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D15977527366A8400A430DB /* ViewController.swift */; };
+		4D15977827366AF300A430DB /* Recipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D15977727366AF300A430DB /* Recipe.storyboard */; };
+		4D15977A27366BA300A430DB /* Journal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D15977927366BA300A430DB /* Journal.storyboard */; };
+		4D15977C27366BA900A430DB /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D15977B27366BA900A430DB /* Feed.storyboard */; };
+		4D15977E27366BB000A430DB /* MyRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D15977D27366BB000A430DB /* MyRoom.storyboard */; };
 		4D92CA3F2733AA6B004C4678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA3E2733AA6B004C4678 /* AppDelegate.swift */; };
 		4D92CA412733AA6B004C4678 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA402733AA6B004C4678 /* SceneDelegate.swift */; };
 		4D92CA432733AA6B004C4678 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA422733AA6B004C4678 /* RecipeViewController.swift */; };
@@ -63,6 +69,12 @@
 		4B71A91F120DA251AD3EE84F /* Pods-YoriBang-YoriBangUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoriBang-YoriBangUITests.release.xcconfig"; path = "Target Support Files/Pods-YoriBang-YoriBangUITests/Pods-YoriBang-YoriBangUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4D029F47273545AA009AB8C6 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		4D029F492735476A009AB8C6 /* CALayer + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer + Extension.swift"; sourceTree = "<group>"; };
+		4D0E25F727366A2E0053C272 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		4D15977527366A8400A430DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D15977727366AF300A430DB /* Recipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recipe.storyboard; sourceTree = "<group>"; };
+		4D15977927366BA300A430DB /* Journal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Journal.storyboard; sourceTree = "<group>"; };
+		4D15977B27366BA900A430DB /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		4D15977D27366BB000A430DB /* MyRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyRoom.storyboard; sourceTree = "<group>"; };
 		4D92CA3B2733AA6B004C4678 /* YoriBang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoriBang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D92CA3E2733AA6B004C4678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D92CA402733AA6B004C4678 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +152,14 @@
 				3AC00BB0BC7EDE156C4943E4 /* Pods-YoriBangTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		4D0E25F927366A4C0053C272 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				4D15977527366A8400A430DB /* ViewController.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		4D21DE002736581E003AD06B /* Recipe */ = {
@@ -238,6 +258,11 @@
 			isa = PBXGroup;
 			children = (
 				4D92CA442733AA6B004C4678 /* Main.storyboard */,
+				4D0E25F727366A2E0053C272 /* Menu.storyboard */,
+				4D15977727366AF300A430DB /* Recipe.storyboard */,
+				4D15977927366BA300A430DB /* Journal.storyboard */,
+				4D15977B27366BA900A430DB /* Feed.storyboard */,
+				4D15977D27366BB000A430DB /* MyRoom.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -251,6 +276,7 @@
 				4D21DE0127365823003AD06B /* Journal */,
 				4D21DE0227365830003AD06B /* Feed */,
 				4D21DE0327365834003AD06B /* MyRoom */,
+				4D0E25F927366A4C0053C272 /* Menu */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -464,7 +490,12 @@
 			files = (
 				4D92CA7A2733AF86004C4678 /* Launches.graphql in Resources */,
 				4D92CA8D2733B43A004C4678 /* schema.json in Resources */,
+				4D15977C27366BA900A430DB /* Feed.storyboard in Resources */,
+				4D15977827366AF300A430DB /* Recipe.storyboard in Resources */,
 				4D92CA4E2733AA6C004C4678 /* LaunchScreen.storyboard in Resources */,
+				4D15977A27366BA300A430DB /* Journal.storyboard in Resources */,
+				4D0E25F827366A2E0053C272 /* Menu.storyboard in Resources */,
+				4D15977E27366BB000A430DB /* MyRoom.storyboard in Resources */,
 				4D92CA4B2733AA6C004C4678 /* Assets.xcassets in Resources */,
 				4D92CA462733AA6B004C4678 /* Main.storyboard in Resources */,
 			);
@@ -623,6 +654,7 @@
 				4D92CA492733AA6B004C4678 /* YoriBang.xcdatamodeld in Sources */,
 				4D92CA432733AA6B004C4678 /* RecipeViewController.swift in Sources */,
 				4D92CA842733B010004C4678 /* UserManagementInterceptor.swift in Sources */,
+				4D15977627366A8400A430DB /* ViewController.swift in Sources */,
 				4D029F48273545AA009AB8C6 /* UIColor + Extension.swift in Sources */,
 				4D92CA9A27342B7F004C4678 /* JournalViewController.swift in Sources */,
 				4D92CA8B2733B38D004C4678 /* UIViewController + Extension.swift in Sources */,
