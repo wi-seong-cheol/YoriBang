@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IPd-Ue-i5s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IPd-Ue-i5s">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,94 +12,33 @@
         <!--Item 1-->
         <scene sceneID="I5Y-5L-Rwa">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qSC-nj-29t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="JournalViewController" id="QRF-mF-jdI" customClass="JournalViewController" customModule="YoriBang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gM9-2h-TZK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="min-rH-DsT">
-                                <rect key="frame" x="188" y="800" width="38" height="38"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGL-mx-hpc">
+                                <rect key="frame" x="87" y="734" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="ZgC-2w-AQn"/>
-                                    <constraint firstAttribute="width" constant="38" id="tXk-lv-DYg"/>
+                                    <constraint firstAttribute="height" constant="128" id="56o-Za-9mK"/>
+                                    <constraint firstAttribute="width" constant="240" id="fqJ-BA-RHL"/>
                                 </constraints>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="egB-4S-Tgi">
-                                <rect key="frame" x="132.5" y="738" width="149" height="79"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bx7-o7-hat">
-                                        <rect key="frame" x="48.5" y="0.0" width="52" height="30"/>
-                                        <state key="normal" title="요리일지">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="aKB-19-RIK">
-                                        <rect key="frame" x="0.0" y="49" width="149" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ew3-q0-xUA">
-                                                <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
-                                                <state key="normal" title="레시피">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yr4-QN-xLU">
-                                                <rect key="frame" x="119" y="0.0" width="30" height="30"/>
-                                                <state key="normal" title="피드">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="linkColor"/>
-                            </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAO-Ff-dP1">
-                                <rect key="frame" x="160.5" y="772.5" width="93" height="93.5"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBW-K8-6Yp">
-                                        <rect key="frame" x="26.5" y="27" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="P9B-AO-S7s"/>
-                                        </constraints>
-                                        <state key="normal" image="add_orange_asset"/>
-                                        <connections>
-                                            <action selector="AddBtn:" destination="QRF-mF-jdI" eventType="touchUpInside" id="wgw-RE-ODB"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="QBW-K8-6Yp" firstAttribute="height" secondItem="gAO-Ff-dP1" secondAttribute="height" multiplier="0.428571" id="3y5-4K-c3Z"/>
-                                    <constraint firstItem="QBW-K8-6Yp" firstAttribute="centerX" secondItem="gAO-Ff-dP1" secondAttribute="centerX" id="HES-jW-cho"/>
-                                    <constraint firstAttribute="width" secondItem="gAO-Ff-dP1" secondAttribute="height" multiplier="1:1" id="aSd-Om-0T1"/>
-                                    <constraint firstItem="QBW-K8-6Yp" firstAttribute="centerY" secondItem="gAO-Ff-dP1" secondAttribute="centerY" id="h8Y-zJ-BBX"/>
-                                </constraints>
-                            </view>
+                                <connections>
+                                    <segue destination="G5Y-OV-Bdh" kind="embed" id="ebz-Ik-7h3"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MBx-WZ-e5C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="min-rH-DsT" secondAttribute="bottom" constant="58" id="5Eo-cj-DD8"/>
-                            <constraint firstItem="gAO-Ff-dP1" firstAttribute="centerX" secondItem="gM9-2h-TZK" secondAttribute="centerX" id="ScU-g3-5Ky"/>
-                            <constraint firstAttribute="bottom" secondItem="egB-4S-Tgi" secondAttribute="bottom" constant="79" id="ebV-4X-ntu"/>
-                            <constraint firstAttribute="bottom" secondItem="gAO-Ff-dP1" secondAttribute="bottom" constant="30" id="inx-zE-voT"/>
-                            <constraint firstItem="min-rH-DsT" firstAttribute="centerX" secondItem="gM9-2h-TZK" secondAttribute="centerX" id="sDP-vt-37j"/>
-                            <constraint firstItem="egB-4S-Tgi" firstAttribute="centerX" secondItem="MBx-WZ-e5C" secondAttribute="centerX" id="vvb-wF-OGm"/>
+                            <constraint firstItem="hGL-mx-hpc" firstAttribute="bottom" secondItem="MBx-WZ-e5C" secondAttribute="bottom" id="dJL-X7-ZKZ"/>
+                            <constraint firstItem="hGL-mx-hpc" firstAttribute="centerX" secondItem="gM9-2h-TZK" secondAttribute="centerX" id="qRx-dJ-lnK"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" image="archivebox" catalog="system" id="1yz-fM-Iok"/>
                     <navigationItem key="navigationItem" id="JK0-Tb-cPc"/>
-                    <connections>
-                        <outlet property="AddBackgroundView" destination="min-rH-DsT" id="4lK-2y-bJI"/>
-                        <outlet property="AddBtn" destination="QBW-K8-6Yp" id="1hW-ov-MTu"/>
-                        <outlet property="AddBtnView" destination="gAO-Ff-dP1" id="oB8-o6-OiA"/>
-                        <outletCollection property="AddItem" destination="Bx7-o7-hat" collectionClass="NSMutableArray" id="HG9-86-Uwg"/>
-                        <outletCollection property="AddItem" destination="Ew3-q0-xUA" collectionClass="NSMutableArray" id="qwe-Op-1Br"/>
-                        <outletCollection property="AddItem" destination="Yr4-QN-xLU" collectionClass="NSMutableArray" id="WfO-Hi-C2x"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qSC-nj-29t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4074" y="4418"/>
         </scene>
@@ -125,15 +64,107 @@
             </objects>
             <point key="canvasLocation" x="-4073.913043478261" y="3565.8482142857142"/>
         </scene>
+        <!--Add View Controller-->
+        <scene sceneID="Fni-ba-28K">
+            <objects>
+                <viewController id="G5Y-OV-Bdh" customClass="AddViewController" customModule="YoriBang" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cAu-a4-d8a">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xI8-kQ-nlz">
+                                <rect key="frame" x="101" y="45" width="38" height="38"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="4gK-ah-WBQ"/>
+                                    <constraint firstAttribute="width" constant="38" id="V7J-WT-Ljp"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="rC0-5m-FrQ">
+                                <rect key="frame" x="45.5" y="24.5" width="149" height="79"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFc-Bz-Sb7">
+                                        <rect key="frame" x="48.5" y="0.0" width="52" height="30"/>
+                                        <state key="normal" title="요리일지">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="cEc-HK-cVZ">
+                                        <rect key="frame" x="0.0" y="49" width="149" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKx-j0-LZD">
+                                                <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
+                                                <state key="normal" title="레시피">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWP-Gx-7YX">
+                                                <rect key="frame" x="119" y="0.0" width="30" height="30"/>
+                                                <state key="normal" title="피드">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qoo-qE-orr">
+                                <rect key="frame" x="73.5" y="17.5" width="93" height="93"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="py7-Bk-4hC">
+                                        <rect key="frame" x="26.5" y="26.5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="jbx-cG-y45"/>
+                                        </constraints>
+                                        <state key="normal" image="add_orange_asset"/>
+                                        <connections>
+                                            <action selector="AddBtn:" destination="G5Y-OV-Bdh" eventType="touchUpInside" id="gzJ-ID-GSq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qoo-qE-orr" secondAttribute="height" multiplier="1:1" id="Jux-CP-XMA"/>
+                                    <constraint firstItem="py7-Bk-4hC" firstAttribute="height" secondItem="qoo-qE-orr" secondAttribute="height" multiplier="0.428571" id="ZK0-ND-XC2"/>
+                                    <constraint firstItem="py7-Bk-4hC" firstAttribute="centerX" secondItem="qoo-qE-orr" secondAttribute="centerX" id="h1C-W1-jnx"/>
+                                    <constraint firstItem="py7-Bk-4hC" firstAttribute="centerY" secondItem="qoo-qE-orr" secondAttribute="centerY" id="tEq-Uq-ILa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CI6-sn-V3B"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="rC0-5m-FrQ" firstAttribute="centerY" secondItem="cAu-a4-d8a" secondAttribute="centerY" id="20I-E8-4Z1"/>
+                            <constraint firstItem="qoo-qE-orr" firstAttribute="centerY" secondItem="cAu-a4-d8a" secondAttribute="centerY" id="9Ys-YV-WQa"/>
+                            <constraint firstItem="xI8-kQ-nlz" firstAttribute="centerX" secondItem="cAu-a4-d8a" secondAttribute="centerX" id="Kkn-Aj-rmh"/>
+                            <constraint firstItem="qoo-qE-orr" firstAttribute="centerX" secondItem="cAu-a4-d8a" secondAttribute="centerX" id="QSY-qI-l5A"/>
+                            <constraint firstItem="qoo-qE-orr" firstAttribute="width" secondItem="qoo-qE-orr" secondAttribute="height" multiplier="1:1" id="Zwp-ha-ioc"/>
+                            <constraint firstItem="xI8-kQ-nlz" firstAttribute="centerY" secondItem="cAu-a4-d8a" secondAttribute="centerY" id="kde-yZ-sbt"/>
+                            <constraint firstItem="rC0-5m-FrQ" firstAttribute="centerX" secondItem="cAu-a4-d8a" secondAttribute="centerX" id="uhD-ya-uVC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="AddBackgroundView" destination="xI8-kQ-nlz" id="CU7-dC-3uc"/>
+                        <outlet property="AddBtn" destination="py7-Bk-4hC" id="csa-pY-XIu"/>
+                        <outlet property="AddBtnView" destination="qoo-qE-orr" id="mqL-uv-SpB"/>
+                        <outletCollection property="AddItem" destination="sKx-j0-LZD" collectionClass="NSMutableArray" id="mnu-ne-Mee"/>
+                        <outletCollection property="AddItem" destination="uFc-Bz-Sb7" collectionClass="NSMutableArray" id="fAL-q5-hZg"/>
+                        <outletCollection property="AddItem" destination="MWP-Gx-7YX" collectionClass="NSMutableArray" id="g6U-iS-JE6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wKK-hf-hW0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4958" y="4648"/>
+        </scene>
     </scenes>
     <resources>
         <image name="add_orange_asset" width="40" height="40"/>
         <image name="archivebox" catalog="system" width="128" height="106"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

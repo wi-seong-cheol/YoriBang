@@ -51,7 +51,11 @@
 		4DBA5A342742460C003928AA /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBA5A332742460C003928AA /* UIFont + Extension.swift */; };
 		4DBA5A3627424F11003928AA /* CustomGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBA5A3527424F11003928AA /* CustomGesture.swift */; };
 		4DBA5A3827427562003928AA /* Upload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DBA5A3727427562003928AA /* Upload.storyboard */; };
+		4DBA5A3A27427C08003928AA /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBA5A3927427C08003928AA /* RecipeTableViewCell.swift */; };
+		4DBA5A3C27427F17003928AA /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DBA5A3B27427F17003928AA /* Roboto-Regular.ttf */; };
+		4DBA5A3E274293B5003928AA /* UploadRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBA5A3D274293B5003928AA /* UploadRecipeViewController.swift */; };
 		4DBB7D2027350E3E009F03D2 /* CustomizedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBB7D1F27350E3E009F03D2 /* CustomizedTabBar.swift */; };
+		4DCDBA302742A1B200AA10FE /* IngrediantSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCDBA2F2742A1B200AA10FE /* IngrediantSearchViewController.swift */; };
 		77B785E45AAE30ED4B8F86C3 /* Pods_YoriBang_YoriBangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B4497B0D3B70B3B85CDB89 /* Pods_YoriBang_YoriBangUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,7 +130,11 @@
 		4DBA5A332742460C003928AA /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
 		4DBA5A3527424F11003928AA /* CustomGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGesture.swift; sourceTree = "<group>"; };
 		4DBA5A3727427562003928AA /* Upload.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Upload.storyboard; sourceTree = "<group>"; };
+		4DBA5A3927427C08003928AA /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		4DBA5A3B27427F17003928AA /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		4DBA5A3D274293B5003928AA /* UploadRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecipeViewController.swift; sourceTree = "<group>"; };
 		4DBB7D1F27350E3E009F03D2 /* CustomizedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedTabBar.swift; sourceTree = "<group>"; };
+		4DCDBA2F2742A1B200AA10FE /* IngrediantSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngrediantSearchViewController.swift; sourceTree = "<group>"; };
 		50757FA73B1A3D8F8D55A0AB /* Pods-YoriBang-YoriBangUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoriBang-YoriBangUITests.debug.xcconfig"; path = "Target Support Files/Pods-YoriBang-YoriBangUITests/Pods-YoriBang-YoriBangUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		968571D977D0DC896529D315 /* Pods-YoriBang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoriBang.debug.xcconfig"; path = "Target Support Files/Pods-YoriBang/Pods-YoriBang.debug.xcconfig"; sourceTree = "<group>"; };
 		A0E54003ACD0EAA26D1930EB /* Pods_YoriBang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoriBang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +197,7 @@
 			children = (
 				4D92CA422733AA6B004C4678 /* RecipeViewController.swift */,
 				4D14404C2737C01E008C46AE /* RecipeContainer.swift */,
+				4DBA5A3927427C08003928AA /* RecipeTableViewCell.swift */,
 			);
 			path = Recipe;
 			sourceTree = "<group>";
@@ -379,6 +388,7 @@
 			children = (
 				4DBA5A2F274243B1003928AA /* GowunDodum-Regular.ttf */,
 				4DBA5A312742442A003928AA /* NotoSansCJKkr-Bold.otf */,
+				4DBA5A3B27427F17003928AA /* Roboto-Regular.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -405,6 +415,8 @@
 			isa = PBXGroup;
 			children = (
 				4DA85E7627356DD800060CFF /* AddViewController.swift */,
+				4DBA5A3D274293B5003928AA /* UploadRecipeViewController.swift */,
+				4DCDBA2F2742A1B200AA10FE /* IngrediantSearchViewController.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -540,6 +552,7 @@
 				4D15977E27366BB000A430DB /* MyRoom.storyboard in Resources */,
 				4D1597802736ABE700A430DB /* GoogleService-Info.plist in Resources */,
 				4DBA5A3827427562003928AA /* Upload.storyboard in Resources */,
+				4DBA5A3C27427F17003928AA /* Roboto-Regular.ttf in Resources */,
 				4D92CA4B2733AA6C004C4678 /* Assets.xcassets in Resources */,
 				4D92CA462733AA6B004C4678 /* Main.storyboard in Resources */,
 			);
@@ -689,8 +702,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D92CA902733B5C5004C4678 /* API.swift in Sources */,
+				4DBA5A3E274293B5003928AA /* UploadRecipeViewController.swift in Sources */,
 				4D92CA802733AFE8004C4678 /* ResponseLoggingInterceptor.swift in Sources */,
 				4D6BFFB72736C45700B0517F /* JoinViewController.swift in Sources */,
+				4DBA5A3A27427C08003928AA /* RecipeTableViewCell.swift in Sources */,
 				4DA85E7727356DD800060CFF /* AddViewController.swift in Sources */,
 				4DBB7D2027350E3E009F03D2 /* CustomizedTabBar.swift in Sources */,
 				4D92CA7C2733AFAA004C4678 /* Network.swift in Sources */,
@@ -709,6 +724,7 @@
 				4DBA5A342742460C003928AA /* UIFont + Extension.swift in Sources */,
 				4D92CAA027342BBA004C4678 /* MyRoomViewController.swift in Sources */,
 				4D1440512738232B008C46AE /* CollectionViewLayout.swift in Sources */,
+				4DCDBA302742A1B200AA10FE /* IngrediantSearchViewController.swift in Sources */,
 				4D92CA3F2733AA6B004C4678 /* AppDelegate.swift in Sources */,
 				4D92CA9627340DF3004C4678 /* TabBarViewController.swift in Sources */,
 				4DBA5A3627424F11003928AA /* CustomGesture.swift in Sources */,

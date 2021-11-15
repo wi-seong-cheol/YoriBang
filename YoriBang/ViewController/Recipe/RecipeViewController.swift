@@ -91,6 +91,12 @@ class RecipeViewController: UIViewController {
             BackView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
+    
+    @IBAction func AddRecipe(_ sender: Any) {
+        let storyboard = UIStoryboard(name:"Upload", bundle: nil)
+        let pushVC = storyboard.instantiateViewController(withIdentifier: "UploadRecipeViewController")
+        self.navigationController?.pushViewController(pushVC, animated: true)
+    }
 }
 
 // MARK: - AddButtonSetting
