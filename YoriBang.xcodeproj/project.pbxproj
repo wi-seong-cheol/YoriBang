@@ -56,6 +56,11 @@
 		4DBA5A3E274293B5003928AA /* UploadRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBA5A3D274293B5003928AA /* UploadRecipeViewController.swift */; };
 		4DBB7D2027350E3E009F03D2 /* CustomizedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBB7D1F27350E3E009F03D2 /* CustomizedTabBar.swift */; };
 		4DCDBA302742A1B200AA10FE /* IngrediantSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCDBA2F2742A1B200AA10FE /* IngrediantSearchViewController.swift */; };
+		4DCDBA322742A90500AA10FE /* SudaRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCDBA312742A90500AA10FE /* SudaRoomViewController.swift */; };
+		4DCDBA342742AA3F00AA10FE /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCDBA332742AA3F00AA10FE /* MenuCell.swift */; };
+		4DCDBA362742AA7100AA10FE /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DCDBA352742AA7100AA10FE /* MenuCell.xib */; };
+		4DCDBA382742AB4200AA10FE /* FocusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DCDBA372742AB4200AA10FE /* FocusView.xib */; };
+		4DCDBA3A2742B93A00AA10FE /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DCDBA392742B93A00AA10FE /* Roboto-Medium.ttf */; };
 		77B785E45AAE30ED4B8F86C3 /* Pods_YoriBang_YoriBangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B4497B0D3B70B3B85CDB89 /* Pods_YoriBang_YoriBangUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +140,11 @@
 		4DBA5A3D274293B5003928AA /* UploadRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecipeViewController.swift; sourceTree = "<group>"; };
 		4DBB7D1F27350E3E009F03D2 /* CustomizedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedTabBar.swift; sourceTree = "<group>"; };
 		4DCDBA2F2742A1B200AA10FE /* IngrediantSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngrediantSearchViewController.swift; sourceTree = "<group>"; };
+		4DCDBA312742A90500AA10FE /* SudaRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudaRoomViewController.swift; sourceTree = "<group>"; };
+		4DCDBA332742AA3F00AA10FE /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		4DCDBA352742AA7100AA10FE /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		4DCDBA372742AB4200AA10FE /* FocusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusView.xib; sourceTree = "<group>"; };
+		4DCDBA392742B93A00AA10FE /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		50757FA73B1A3D8F8D55A0AB /* Pods-YoriBang-YoriBangUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoriBang-YoriBangUITests.debug.xcconfig"; path = "Target Support Files/Pods-YoriBang-YoriBangUITests/Pods-YoriBang-YoriBangUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		968571D977D0DC896529D315 /* Pods-YoriBang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoriBang.debug.xcconfig"; path = "Target Support Files/Pods-YoriBang/Pods-YoriBang.debug.xcconfig"; sourceTree = "<group>"; };
 		A0E54003ACD0EAA26D1930EB /* Pods_YoriBang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoriBang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +224,10 @@
 			isa = PBXGroup;
 			children = (
 				4D92CA9D27342BB5004C4678 /* FeedViewController.swift */,
+				4DCDBA312742A90500AA10FE /* SudaRoomViewController.swift */,
+				4DCDBA332742AA3F00AA10FE /* MenuCell.swift */,
+				4DCDBA352742AA7100AA10FE /* MenuCell.xib */,
+				4DCDBA372742AB4200AA10FE /* FocusView.xib */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -389,6 +403,7 @@
 				4DBA5A2F274243B1003928AA /* GowunDodum-Regular.ttf */,
 				4DBA5A312742442A003928AA /* NotoSansCJKkr-Bold.otf */,
 				4DBA5A3B27427F17003928AA /* Roboto-Regular.ttf */,
+				4DCDBA392742B93A00AA10FE /* Roboto-Medium.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -542,11 +557,13 @@
 			files = (
 				4D92CA7A2733AF86004C4678 /* Launches.graphql in Resources */,
 				4D92CA8D2733B43A004C4678 /* schema.json in Resources */,
+				4DCDBA362742AA7100AA10FE /* MenuCell.xib in Resources */,
 				4DBA5A30274243B1003928AA /* GowunDodum-Regular.ttf in Resources */,
 				4D15977C27366BA900A430DB /* Feed.storyboard in Resources */,
 				4DBA5A322742442A003928AA /* NotoSansCJKkr-Bold.otf in Resources */,
 				4D15977827366AF300A430DB /* Recipe.storyboard in Resources */,
 				4D92CA4E2733AA6C004C4678 /* LaunchScreen.storyboard in Resources */,
+				4DCDBA3A2742B93A00AA10FE /* Roboto-Medium.ttf in Resources */,
 				4D15977A27366BA300A430DB /* Journal.storyboard in Resources */,
 				4D0E25F827366A2E0053C272 /* Menu.storyboard in Resources */,
 				4D15977E27366BB000A430DB /* MyRoom.storyboard in Resources */,
@@ -554,6 +571,7 @@
 				4DBA5A3827427562003928AA /* Upload.storyboard in Resources */,
 				4DBA5A3C27427F17003928AA /* Roboto-Regular.ttf in Resources */,
 				4D92CA4B2733AA6C004C4678 /* Assets.xcassets in Resources */,
+				4DCDBA382742AB4200AA10FE /* FocusView.xib in Resources */,
 				4D92CA462733AA6B004C4678 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -708,6 +726,7 @@
 				4DBA5A3A27427C08003928AA /* RecipeTableViewCell.swift in Sources */,
 				4DA85E7727356DD800060CFF /* AddViewController.swift in Sources */,
 				4DBB7D2027350E3E009F03D2 /* CustomizedTabBar.swift in Sources */,
+				4DCDBA322742A90500AA10FE /* SudaRoomViewController.swift in Sources */,
 				4D92CA7C2733AFAA004C4678 /* Network.swift in Sources */,
 				4D14404D2737C01E008C46AE /* RecipeContainer.swift in Sources */,
 				4D92CA9E27342BB5004C4678 /* FeedViewController.swift in Sources */,
@@ -730,6 +749,7 @@
 				4DBA5A3627424F11003928AA /* CustomGesture.swift in Sources */,
 				4D029F4A2735476A009AB8C6 /* CALayer + Extension.swift in Sources */,
 				4D92CA822733AFFC004C4678 /* NetworkInterceptorProvider.swift in Sources */,
+				4DCDBA342742AA3F00AA10FE /* MenuCell.swift in Sources */,
 				4D92CA412733AA6B004C4678 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

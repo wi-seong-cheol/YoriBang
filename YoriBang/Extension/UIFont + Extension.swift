@@ -21,6 +21,7 @@ extension UIFont {
     class func NotoSansCJKkr(type: NotoSansCJKkrType, size: CGFloat) -> UIFont! {
         let name = "NotoSansCJKkr"
         guard let font = UIFont(name: name + type.name, size: size) else {
+            print("Do not Font")
             return nil
         }
         return font
@@ -28,11 +29,14 @@ extension UIFont {
     
     enum NotoSansCJKkrType {
         case bold
+        case medium
         
         var name: String {
             switch self {
             case .bold:
-                return "-bold"
+                return "-Bold"
+            case .medium:
+                return "-Medium"
             }
         }
     }
@@ -52,7 +56,7 @@ extension UIFont {
         var name: String {
             switch self {
             case .regular:
-                return "-regular"
+                return "-Regular"
             }
         }
     }

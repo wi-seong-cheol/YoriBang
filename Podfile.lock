@@ -78,6 +78,7 @@ PODS:
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
+  - PagingKit (1.15.0)
   - PromisesObjC (1.2.12)
   - RAMAnimatedTabBarController (5.2.0)
   - SQLite.swift (0.12.2):
@@ -89,6 +90,7 @@ DEPENDENCIES:
   - Apollo/WebSocket
   - Firebase/Auth
   - MaterialComponents/BottomSheet
+  - PagingKit
   - RAMAnimatedTabBarController
 
 SPEC REPOS:
@@ -103,6 +105,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - MaterialComponents
     - nanopb
+    - PagingKit
     - PromisesObjC
     - RAMAnimatedTabBarController
     - SQLite.swift
@@ -118,10 +121,11 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  PagingKit: 4bd58b65d71a82ab98486b6927e870c7fbc6c6eb
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
 
-PODFILE CHECKSUM: 01e47efa092d0b18022c86c577f89df38f20f4d9
+PODFILE CHECKSUM: 72219794b149541f9e848525e69d3ef849e0f5ee
 
 COCOAPODS: 1.10.1

@@ -20,7 +20,8 @@ target 'YoriBang' do
   # Pods for TabBarAnimation
   pod 'RAMAnimatedTabBarController'
   
-  
+  # Pods for PagingKit
+  pod "PagingKit"  
   
   target 'YoriBangTests' do
     inherit! :search_paths
