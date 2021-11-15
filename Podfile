@@ -7,6 +7,9 @@ target 'YoriBang' do
 
   # Pods for YoriBang
   
+  # Pods for Firebase
+  pod 'Firebase/Auth'
+  
   # Pods for GraphQL
   pod "Apollo/SQLite"
   pod "Apollo/WebSocket"
@@ -16,6 +19,8 @@ target 'YoriBang' do
   
   # Pods for TabBarAnimation
   pod 'RAMAnimatedTabBarController'
+  
+  
   
   target 'YoriBangTests' do
     inherit! :search_paths

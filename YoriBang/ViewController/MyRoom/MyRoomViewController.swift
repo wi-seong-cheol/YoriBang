@@ -47,7 +47,7 @@ class MyRoomViewController: UIViewController {
         AddBackgroundView.backgroundColor = UIColor(red: 254, green: 139, blue: 88, a: 53)
         
         // BackView
-        view.insertSubview(BackView, at: 0)
+        view.insertSubview(BackView, at: 12)
         BackView.alpha = 0.0
         
         setupLayout()

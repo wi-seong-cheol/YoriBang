@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ry5-aE-Doy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ry5-aE-Doy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Bottom Sheet View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="UDD-qH-ipG">
             <objects>
-                <viewController storyboardIdentifier="BottomSheetViewController" id="B7N-HJ-9Oh" customClass="BottomSheetViewController" customModule="YoriBang" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="B7N-HJ-9Oh" customClass="SearchViewController" customModule="YoriBang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="66t-1A-ufB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,6 +22,63 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BvV-Rv-d4n">
+                                <rect key="frame" x="0.0" y="327" width="414" height="224"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OQF-kk-qjI">
+                                    <size key="itemSize" width="128" height="48"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TagCollectionViewCell" id="0go-9O-rBb" customClass="TagCollectionViewCell" customModule="YoriBang" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="139.5" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oIN-np-raA">
+                                            <rect key="frame" x="0.0" y="0.0" width="139.5" height="48"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UuV-rh-bOh">
+                                                    <rect key="frame" x="58.5" y="13.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0n-Kk-hlj">
+                                                    <rect key="frame" x="8" y="8" width="42.5" height="31"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="cancelBtn:" destination="0go-9O-rBb" eventType="touchUpInside" id="yq5-8O-IYy"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="A0n-Kk-hlj" secondAttribute="bottom" constant="9" id="52H-fj-X3b"/>
+                                                <constraint firstItem="A0n-Kk-hlj" firstAttribute="leading" secondItem="oIN-np-raA" secondAttribute="leading" constant="8" id="5S8-8I-lhw"/>
+                                                <constraint firstItem="UuV-rh-bOh" firstAttribute="centerY" secondItem="oIN-np-raA" secondAttribute="centerY" id="Mcr-Cc-bd9"/>
+                                                <constraint firstItem="UuV-rh-bOh" firstAttribute="leading" secondItem="A0n-Kk-hlj" secondAttribute="trailing" constant="8" symbolic="YES" id="b6F-2W-rSD"/>
+                                                <constraint firstItem="A0n-Kk-hlj" firstAttribute="top" secondItem="oIN-np-raA" secondAttribute="top" constant="8" id="chN-uS-0M2"/>
+                                                <constraint firstAttribute="trailing" secondItem="UuV-rh-bOh" secondAttribute="trailing" priority="250" constant="39" id="nnn-Bx-GJG"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="UuV-rh-bOh" id="Mqq-eg-Ab7"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tpl-UJ-uyG">
+                                <rect key="frame" x="183" y="124" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="확인"/>
+                                <connections>
+                                    <action selector="OKBtn:" destination="B7N-HJ-9Oh" eventType="touchUpInside" id="ZiP-tX-eJj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kBY-Ko-uoY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -30,10 +89,75 @@
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="TagCollectionView" destination="BvV-Rv-d4n" id="KDK-DN-FYg"/>
+                        <outlet property="searchTextField" destination="Mhn-mu-Cht" id="C6Z-6F-eM2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LrM-xo-WaU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2729" y="2090"/>
+            <point key="canvasLocation" x="-3546.376811594203" y="2793.75"/>
+        </scene>
+        <!--Join View Controller-->
+        <scene sceneID="Zso-WP-yIz">
+            <objects>
+                <viewController id="4lo-WY-Ygg" customClass="JoinViewController" customModule="YoriBang" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YLl-6Q-Bsv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oU1-RR-Ub2">
+                                <rect key="frame" x="10" y="144" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="PhoneNumberTextField:" destination="A0j-hQ-llw" eventType="editingDidEnd" id="xIg-2c-NLx"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tO1-C3-mLU">
+                                <rect key="frame" x="166" y="188" width="82" height="30"/>
+                                <state key="normal" title="인증번호 발송"/>
+                                <connections>
+                                    <action selector="sendBtn:" destination="4lo-WY-Ygg" eventType="touchUpInside" id="gHM-Jz-NCS"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M9e-YC-PKh">
+                                <rect key="frame" x="10" y="228" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ku0-MV-x3C">
+                                <rect key="frame" x="192" y="272" width="30" height="30"/>
+                                <state key="normal" title="확인"/>
+                                <connections>
+                                    <action selector="verificationBtn:" destination="4lo-WY-Ygg" eventType="touchUpInside" id="Mlq-oW-cpl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fWu-uS-tVh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tO1-C3-mLU" firstAttribute="top" secondItem="oU1-RR-Ub2" secondAttribute="bottom" constant="10" id="8aH-gI-QaD"/>
+                            <constraint firstItem="oU1-RR-Ub2" firstAttribute="leading" secondItem="fWu-uS-tVh" secondAttribute="leading" constant="10" id="I7s-yr-EMa"/>
+                            <constraint firstItem="ku0-MV-x3C" firstAttribute="centerX" secondItem="YLl-6Q-Bsv" secondAttribute="centerX" id="OSu-px-Sab"/>
+                            <constraint firstItem="M9e-YC-PKh" firstAttribute="top" secondItem="tO1-C3-mLU" secondAttribute="bottom" constant="10" id="P9f-cm-zSl"/>
+                            <constraint firstItem="oU1-RR-Ub2" firstAttribute="top" secondItem="fWu-uS-tVh" secondAttribute="top" constant="100" id="Xhm-nt-NUQ"/>
+                            <constraint firstItem="ku0-MV-x3C" firstAttribute="top" secondItem="M9e-YC-PKh" secondAttribute="bottom" constant="10" id="jTV-eS-I0f"/>
+                            <constraint firstItem="fWu-uS-tVh" firstAttribute="trailing" secondItem="oU1-RR-Ub2" secondAttribute="trailing" constant="10" id="kuI-kh-IOU"/>
+                            <constraint firstItem="tO1-C3-mLU" firstAttribute="centerX" secondItem="YLl-6Q-Bsv" secondAttribute="centerX" id="mDr-9H-IUH"/>
+                            <constraint firstItem="M9e-YC-PKh" firstAttribute="leading" secondItem="fWu-uS-tVh" secondAttribute="leading" constant="10" id="n1G-Mb-Zig"/>
+                            <constraint firstItem="fWu-uS-tVh" firstAttribute="trailing" secondItem="M9e-YC-PKh" secondAttribute="trailing" constant="10" id="oXq-Xt-YWr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="PhoneNumberTextField" destination="oU1-RR-Ub2" id="520-50-hB5"/>
+                        <outlet property="VerificationCodeTextField" destination="M9e-YC-PKh" id="5fl-Ut-VRM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M8W-6d-0U1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="A0j-hQ-llw" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-4368" y="2054"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="57T-Gg-Afg">
@@ -101,4 +225,10 @@
             <size key="intrinsicContentSize" width="-1" height="83"/>
         </designable>
     </designables>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

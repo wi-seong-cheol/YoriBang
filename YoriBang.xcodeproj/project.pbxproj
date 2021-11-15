@@ -12,11 +12,16 @@
 		4D029F48273545AA009AB8C6 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D029F47273545AA009AB8C6 /* UIColor + Extension.swift */; };
 		4D029F4A2735476A009AB8C6 /* CALayer + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D029F492735476A009AB8C6 /* CALayer + Extension.swift */; };
 		4D0E25F827366A2E0053C272 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D0E25F727366A2E0053C272 /* Menu.storyboard */; };
-		4D15977627366A8400A430DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D15977527366A8400A430DB /* ViewController.swift */; };
+		4D14404D2737C01E008C46AE /* RecipeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D14404C2737C01E008C46AE /* RecipeContainer.swift */; };
+		4D14404F27381FFF008C46AE /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D14404E27381FFF008C46AE /* TagCollectionViewCell.swift */; };
+		4D1440512738232B008C46AE /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1440502738232B008C46AE /* CollectionViewLayout.swift */; };
+		4D15977627366A8400A430DB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D15977527366A8400A430DB /* SearchViewController.swift */; };
 		4D15977827366AF300A430DB /* Recipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D15977727366AF300A430DB /* Recipe.storyboard */; };
 		4D15977A27366BA300A430DB /* Journal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D15977927366BA300A430DB /* Journal.storyboard */; };
 		4D15977C27366BA900A430DB /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D15977B27366BA900A430DB /* Feed.storyboard */; };
 		4D15977E27366BB000A430DB /* MyRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D15977D27366BB000A430DB /* MyRoom.storyboard */; };
+		4D1597802736ABE700A430DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D15977F2736ABE700A430DB /* GoogleService-Info.plist */; };
+		4D6BFFB72736C45700B0517F /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BFFB62736C45700B0517F /* JoinViewController.swift */; };
 		4D92CA3F2733AA6B004C4678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA3E2733AA6B004C4678 /* AppDelegate.swift */; };
 		4D92CA412733AA6B004C4678 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA402733AA6B004C4678 /* SceneDelegate.swift */; };
 		4D92CA432733AA6B004C4678 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA422733AA6B004C4678 /* RecipeViewController.swift */; };
@@ -35,12 +40,17 @@
 		4D92CA8B2733B38D004C4678 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA8A2733B38D004C4678 /* UIViewController + Extension.swift */; };
 		4D92CA8D2733B43A004C4678 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D92CA8C2733B43A004C4678 /* schema.json */; };
 		4D92CA902733B5C5004C4678 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA8F2733B5C5004C4678 /* API.swift */; };
-		4D92CA942733C0AF004C4678 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA932733C0AF004C4678 /* BottomSheetViewController.swift */; };
 		4D92CA9627340DF3004C4678 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA9527340DF3004C4678 /* TabBarViewController.swift */; };
 		4D92CA9A27342B7F004C4678 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA9927342B7F004C4678 /* JournalViewController.swift */; };
 		4D92CA9E27342BB5004C4678 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA9D27342BB5004C4678 /* FeedViewController.swift */; };
 		4D92CAA027342BBA004C4678 /* MyRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92CA9F27342BBA004C4678 /* MyRoomViewController.swift */; };
 		4DA85E7727356DD800060CFF /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA85E7627356DD800060CFF /* AddViewController.swift */; };
+		4DBA5A2E274236E4003928AA /* EdgeShadowLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBA5A2D274236E4003928AA /* EdgeShadowLayer.swift */; };
+		4DBA5A30274243B1003928AA /* GowunDodum-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DBA5A2F274243B1003928AA /* GowunDodum-Regular.ttf */; };
+		4DBA5A322742442A003928AA /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DBA5A312742442A003928AA /* NotoSansCJKkr-Bold.otf */; };
+		4DBA5A342742460C003928AA /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBA5A332742460C003928AA /* UIFont + Extension.swift */; };
+		4DBA5A3627424F11003928AA /* CustomGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBA5A3527424F11003928AA /* CustomGesture.swift */; };
+		4DBA5A3827427562003928AA /* Upload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DBA5A3727427562003928AA /* Upload.storyboard */; };
 		4DBB7D2027350E3E009F03D2 /* CustomizedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBB7D1F27350E3E009F03D2 /* CustomizedTabBar.swift */; };
 		77B785E45AAE30ED4B8F86C3 /* Pods_YoriBang_YoriBangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B4497B0D3B70B3B85CDB89 /* Pods_YoriBang_YoriBangUITests.framework */; };
 /* End PBXBuildFile section */
@@ -70,11 +80,17 @@
 		4D029F47273545AA009AB8C6 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		4D029F492735476A009AB8C6 /* CALayer + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer + Extension.swift"; sourceTree = "<group>"; };
 		4D0E25F727366A2E0053C272 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
-		4D15977527366A8400A430DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D14404C2737C01E008C46AE /* RecipeContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeContainer.swift; sourceTree = "<group>"; };
+		4D14404E27381FFF008C46AE /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
+		4D1440502738232B008C46AE /* CollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayout.swift; sourceTree = "<group>"; };
+		4D15977527366A8400A430DB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4D15977727366AF300A430DB /* Recipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recipe.storyboard; sourceTree = "<group>"; };
 		4D15977927366BA300A430DB /* Journal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Journal.storyboard; sourceTree = "<group>"; };
 		4D15977B27366BA900A430DB /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		4D15977D27366BB000A430DB /* MyRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyRoom.storyboard; sourceTree = "<group>"; };
+		4D15977F2736ABE700A430DB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4D6BFFB62736C45700B0517F /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		4D6BFFB82736C50600B0517F /* YoriBang.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YoriBang.entitlements; sourceTree = "<group>"; };
 		4D92CA3B2733AA6B004C4678 /* YoriBang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoriBang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D92CA3E2733AA6B004C4678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D92CA402733AA6B004C4678 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,12 +115,17 @@
 		4D92CA8A2733B38D004C4678 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		4D92CA8C2733B43A004C4678 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		4D92CA8F2733B5C5004C4678 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		4D92CA932733C0AF004C4678 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		4D92CA9527340DF3004C4678 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		4D92CA9927342B7F004C4678 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		4D92CA9D27342BB5004C4678 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		4D92CA9F27342BBA004C4678 /* MyRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRoomViewController.swift; sourceTree = "<group>"; };
 		4DA85E7627356DD800060CFF /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		4DBA5A2D274236E4003928AA /* EdgeShadowLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeShadowLayer.swift; sourceTree = "<group>"; };
+		4DBA5A2F274243B1003928AA /* GowunDodum-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GowunDodum-Regular.ttf"; sourceTree = "<group>"; };
+		4DBA5A312742442A003928AA /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		4DBA5A332742460C003928AA /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
+		4DBA5A3527424F11003928AA /* CustomGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGesture.swift; sourceTree = "<group>"; };
+		4DBA5A3727427562003928AA /* Upload.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Upload.storyboard; sourceTree = "<group>"; };
 		4DBB7D1F27350E3E009F03D2 /* CustomizedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedTabBar.swift; sourceTree = "<group>"; };
 		50757FA73B1A3D8F8D55A0AB /* Pods-YoriBang-YoriBangUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoriBang-YoriBangUITests.debug.xcconfig"; path = "Target Support Files/Pods-YoriBang-YoriBangUITests/Pods-YoriBang-YoriBangUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		968571D977D0DC896529D315 /* Pods-YoriBang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoriBang.debug.xcconfig"; path = "Target Support Files/Pods-YoriBang/Pods-YoriBang.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,7 +178,8 @@
 		4D0E25F927366A4C0053C272 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				4D15977527366A8400A430DB /* ViewController.swift */,
+				4D15977527366A8400A430DB /* SearchViewController.swift */,
+				4D14404E27381FFF008C46AE /* TagCollectionViewCell.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -166,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				4D92CA422733AA6B004C4678 /* RecipeViewController.swift */,
+				4D14404C2737C01E008C46AE /* RecipeContainer.swift */,
 			);
 			path = Recipe;
 			sourceTree = "<group>";
@@ -194,6 +217,14 @@
 			path = MyRoom;
 			sourceTree = "<group>";
 		};
+		4D6BFFB52736C42900B0517F /* Join */ = {
+			isa = PBXGroup;
+			children = (
+				4D6BFFB62736C45700B0517F /* JoinViewController.swift */,
+			);
+			path = Join;
+			sourceTree = "<group>";
+		};
 		4D92CA322733AA6B004C4678 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +250,7 @@
 		4D92CA3D2733AA6B004C4678 /* YoriBang */ = {
 			isa = PBXGroup;
 			children = (
+				4D6BFFB82736C50600B0517F /* YoriBang.entitlements */,
 				4D92CA882733B1FA004C4678 /* Font */,
 				4D92CA712733AB75004C4678 /* Storyboard */,
 				4D92CA742733AB8F004C4678 /* GQL */,
@@ -232,6 +264,7 @@
 				4D92CA4C2733AA6C004C4678 /* LaunchScreen.storyboard */,
 				4D92CA4F2733AA6C004C4678 /* Info.plist */,
 				4D92CA472733AA6B004C4678 /* YoriBang.xcdatamodeld */,
+				4D15977F2736ABE700A430DB /* GoogleService-Info.plist */,
 			);
 			path = YoriBang;
 			sourceTree = "<group>";
@@ -261,6 +294,7 @@
 				4D0E25F727366A2E0053C272 /* Menu.storyboard */,
 				4D15977727366AF300A430DB /* Recipe.storyboard */,
 				4D15977927366BA300A430DB /* Journal.storyboard */,
+				4DBA5A3727427562003928AA /* Upload.storyboard */,
 				4D15977B27366BA900A430DB /* Feed.storyboard */,
 				4D15977D27366BB000A430DB /* MyRoom.storyboard */,
 			);
@@ -270,6 +304,7 @@
 		4D92CA722733AB7F004C4678 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4D6BFFB52736C42900B0517F /* Join */,
 				4D92CA9727341041004C4678 /* TabBar */,
 				4D92CA9827341046004C4678 /* Add */,
 				4D21DE002736581E003AD06B /* Recipe */,
@@ -287,6 +322,7 @@
 				4D92CA8A2733B38D004C4678 /* UIViewController + Extension.swift */,
 				4D029F47273545AA009AB8C6 /* UIColor + Extension.swift */,
 				4D029F492735476A009AB8C6 /* CALayer + Extension.swift */,
+				4DBA5A332742460C003928AA /* UIFont + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -317,6 +353,9 @@
 		4D92CA762733ABB8004C4678 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				4D1440502738232B008C46AE /* CollectionViewLayout.swift */,
+				4DBA5A2D274236E4003928AA /* EdgeShadowLayer.swift */,
+				4DBA5A3527424F11003928AA /* CustomGesture.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -338,6 +377,8 @@
 		4D92CA882733B1FA004C4678 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				4DBA5A2F274243B1003928AA /* GowunDodum-Regular.ttf */,
+				4DBA5A312742442A003928AA /* NotoSansCJKkr-Bold.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -363,7 +404,6 @@
 		4D92CA9827341046004C4678 /* Add */ = {
 			isa = PBXGroup;
 			children = (
-				4D92CA932733C0AF004C4678 /* BottomSheetViewController.swift */,
 				4DA85E7627356DD800060CFF /* AddViewController.swift */,
 			);
 			path = Add;
@@ -490,12 +530,16 @@
 			files = (
 				4D92CA7A2733AF86004C4678 /* Launches.graphql in Resources */,
 				4D92CA8D2733B43A004C4678 /* schema.json in Resources */,
+				4DBA5A30274243B1003928AA /* GowunDodum-Regular.ttf in Resources */,
 				4D15977C27366BA900A430DB /* Feed.storyboard in Resources */,
+				4DBA5A322742442A003928AA /* NotoSansCJKkr-Bold.otf in Resources */,
 				4D15977827366AF300A430DB /* Recipe.storyboard in Resources */,
 				4D92CA4E2733AA6C004C4678 /* LaunchScreen.storyboard in Resources */,
 				4D15977A27366BA300A430DB /* Journal.storyboard in Resources */,
 				4D0E25F827366A2E0053C272 /* Menu.storyboard in Resources */,
 				4D15977E27366BB000A430DB /* MyRoom.storyboard in Resources */,
+				4D1597802736ABE700A430DB /* GoogleService-Info.plist in Resources */,
+				4DBA5A3827427562003928AA /* Upload.storyboard in Resources */,
 				4D92CA4B2733AA6C004C4678 /* Assets.xcassets in Resources */,
 				4D92CA462733AA6B004C4678 /* Main.storyboard in Resources */,
 			);
@@ -646,22 +690,28 @@
 			files = (
 				4D92CA902733B5C5004C4678 /* API.swift in Sources */,
 				4D92CA802733AFE8004C4678 /* ResponseLoggingInterceptor.swift in Sources */,
+				4D6BFFB72736C45700B0517F /* JoinViewController.swift in Sources */,
 				4DA85E7727356DD800060CFF /* AddViewController.swift in Sources */,
 				4DBB7D2027350E3E009F03D2 /* CustomizedTabBar.swift in Sources */,
 				4D92CA7C2733AFAA004C4678 /* Network.swift in Sources */,
+				4D14404D2737C01E008C46AE /* RecipeContainer.swift in Sources */,
 				4D92CA9E27342BB5004C4678 /* FeedViewController.swift in Sources */,
 				4D92CA7E2733AFC4004C4678 /* RequestLoggingInterceptor.swift in Sources */,
+				4D14404F27381FFF008C46AE /* TagCollectionViewCell.swift in Sources */,
 				4D92CA492733AA6B004C4678 /* YoriBang.xcdatamodeld in Sources */,
 				4D92CA432733AA6B004C4678 /* RecipeViewController.swift in Sources */,
 				4D92CA842733B010004C4678 /* UserManagementInterceptor.swift in Sources */,
-				4D15977627366A8400A430DB /* ViewController.swift in Sources */,
+				4D15977627366A8400A430DB /* SearchViewController.swift in Sources */,
+				4DBA5A2E274236E4003928AA /* EdgeShadowLayer.swift in Sources */,
 				4D029F48273545AA009AB8C6 /* UIColor + Extension.swift in Sources */,
 				4D92CA9A27342B7F004C4678 /* JournalViewController.swift in Sources */,
 				4D92CA8B2733B38D004C4678 /* UIViewController + Extension.swift in Sources */,
+				4DBA5A342742460C003928AA /* UIFont + Extension.swift in Sources */,
 				4D92CAA027342BBA004C4678 /* MyRoomViewController.swift in Sources */,
+				4D1440512738232B008C46AE /* CollectionViewLayout.swift in Sources */,
 				4D92CA3F2733AA6B004C4678 /* AppDelegate.swift in Sources */,
-				4D92CA942733C0AF004C4678 /* BottomSheetViewController.swift in Sources */,
 				4D92CA9627340DF3004C4678 /* TabBarViewController.swift in Sources */,
+				4DBA5A3627424F11003928AA /* CustomGesture.swift in Sources */,
 				4D029F4A2735476A009AB8C6 /* CALayer + Extension.swift in Sources */,
 				4D92CA822733AFFC004C4678 /* NetworkInterceptorProvider.swift in Sources */,
 				4D92CA412733AA6B004C4678 /* SceneDelegate.swift in Sources */,
@@ -841,6 +891,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = YoriBang/YoriBang.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2KQLD72485;
 				INFOPLIST_FILE = YoriBang/Info.plist;
@@ -862,6 +913,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = YoriBang/YoriBang.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2KQLD72485;
 				INFOPLIST_FILE = YoriBang/Info.plist;

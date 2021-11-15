@@ -19,16 +19,16 @@ class CustomizedTabBar: UITabBar {
         shapeLayer.path = createPath()
         shapeLayer.strokeColor = UIColor.white.cgColor
         
-        // shadow
         shapeLayer.shadowColor = UIColor.black.cgColor
         shapeLayer.masksToBounds = false
-        shapeLayer.shadowOffset = CGSize(width: 0, height: 2)
+        shapeLayer.shadowOffset = CGSize(width: 0, height: 4)
         shapeLayer.shadowRadius = 4 // 반경
         shapeLayer.shadowOpacity = 0.16
+        shapeLayer.shouldRasterize = true
         
         shapeLayer.fillColor = UIColor.white.cgColor
         shapeLayer.lineWidth = 1.0
-
+        
         if let oldShapeLayer = self.shapeLayer {
             self.layer.replaceSublayer(oldShapeLayer, with: shapeLayer)
         } else {

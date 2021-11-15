@@ -13,6 +13,10 @@ class RecipeViewController: UIViewController {
     @IBOutlet weak var AddBackgroundView: UIView!
     @IBOutlet var AddItem: [UIButton]!
     @IBOutlet weak var AddBtn: UIButton!
+    @IBOutlet var CategoryLabel: [UILabel]!
+    
+    @IBOutlet var Category: [UIView]!
+    
     private let BackView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.darkGray.withAlphaComponent(0.7)
@@ -34,7 +38,7 @@ class RecipeViewController: UIViewController {
     }
     
     func configure() {
-        //Button Setting
+        // Add Button Setting
         AddBtnSet(true, 1)
         AddBackgroundView.layer.cornerRadius = AddBackgroundView.frame.width / 2
         AddBackgroundView.clipsToBounds = true
@@ -54,6 +58,28 @@ class RecipeViewController: UIViewController {
         BackView.addGestureRecognizer(backTap)
         BackView.isUserInteractionEnabled = true
         
+        // Category Button Setting
+        for label in CategoryLabel {
+            label.font = UIFont.Gowun(size: 10)
+        }
+        for categoryView in Category {
+            let tapOnMyViewButton = CustomGesture(target: self, action: #selector(self.didTapOnMyViewButton(gesture: )))
+            tapOnMyViewButton.tag = categoryView.tag
+            categoryView.addGestureRecognizer(tapOnMyViewButton)
+        }
+    }
+    
+    @objc func didTapOnMyViewButton(gesture: CustomGesture) {
+        guard let tag = gesture.tag else {
+            print("Tag가 존재하지 않습니다.")
+            return
+        }
+        switch tag {
+        case 0: break
+            
+        default:
+            break
+        }
     }
     
     private func setupLayout() {
@@ -65,7 +91,10 @@ class RecipeViewController: UIViewController {
             BackView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
-    
+}
+
+// MARK: - AddButtonSetting
+extension RecipeViewController {
     func AddBtnSet(_ state: Bool, _ alpha: Int) {
         let currentState = state
         for addItemBtn in AddItem {
@@ -110,9 +139,6 @@ class RecipeViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func JournalBtn(_ sender: Any) {
-        print("dgdg")
-    }
     
     private func hideBackSheetAndGoBack() {
         closeAddBtn()
@@ -130,3 +156,9 @@ class RecipeViewController: UIViewController {
         hideBackSheetAndGoBack()
     }
 }
+
+// MARK: - CategoryBtn
+extension RecipeViewController {
+    
+}
+
