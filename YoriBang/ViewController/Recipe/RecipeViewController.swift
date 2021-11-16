@@ -75,7 +75,12 @@ class RecipeViewController: UIViewController {
             return
         }
         switch tag {
-        case 0: break
+        case 0:
+            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "AllRecipeViewController")
+            self.navigationController?.pushViewController(pushVC!, animated: true)
+            break
+        case 1:
+            print(tag)
             
         default:
             break
@@ -97,6 +102,14 @@ class RecipeViewController: UIViewController {
         let pushVC = storyboard.instantiateViewController(withIdentifier: "UploadRecipeViewController")
         self.navigationController?.pushViewController(pushVC, animated: true)
     }
+    
+    @IBAction func AddBtn(_ sender: Any) {
+        if AddState {
+            closeAddBtn()
+        } else {
+            openAddBtn()
+        }
+    }
 }
 
 // MARK: - AddButtonSetting
@@ -106,14 +119,6 @@ extension RecipeViewController {
         for addItemBtn in AddItem {
             addItemBtn.isHidden = currentState
             addItemBtn.alpha = 1
-        }
-    }
-    
-    @IBAction func AddBtn(_ sender: Any) {
-        if AddState {
-            closeAddBtn()
-        } else {
-            openAddBtn()
         }
     }
     

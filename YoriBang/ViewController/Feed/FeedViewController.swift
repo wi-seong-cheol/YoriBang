@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import PagingKit
 
 class FeedViewController: UIViewController {
     
@@ -14,13 +15,42 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var AddBackgroundView: UIView!
     @IBOutlet var AddItem: [UIButton]!
     @IBOutlet weak var AddBtn: UIButton!
+    
+    
+//    var menuViewController: PagingMenuViewController!
+//    var contentViewController: PagingContentViewController!
+    var AddState = false
+    let shapeLayer = CAShapeLayer()
+    
+//    static var viewController: (UIColor) -> UIViewController = { (color) in
+//        let vc = UIViewController()
+//        vc.view.backgroundColor = color
+//        return vc
+//    }
+//
+//    var dataSource = [(menu: String, content: UIViewController)]() {
+//        didSet{
+//            menuViewController.reloadData()
+//            contentViewController.reloadData()
+//        }
+//    }
+//
+//    lazy var firstLoad: (() -> Void)? = { [weak self, menuViewController, contentViewController] in
+//        menuViewController?.reloadData()
+//        contentViewController?.reloadData()
+//        self?.firstLoad = nil
+//    }
     private let BackView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.darkGray.withAlphaComponent(0.7)
         return view
     }()
-    var AddState = false
-    let shapeLayer = CAShapeLayer()
+//
+//
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        firstLoad?()
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +65,12 @@ class FeedViewController: UIViewController {
     }
     
     func configure() {
+        // View Pager Setting
+//        menuViewController.register(nib: UINib(nibName: "MenuCell", bundle: nil), forCellWithReuseIdentifier: "MenuCell")
+//        menuViewController.registerFocusView(nib: UINib(nibName: "FocusView", bundle: nil))
+//        dataSource = makeDataSource()
+//        contentViewController.scrollView.isScrollEnabled = true
+        
         //Button Setting
         AddBtnSet(true, 1)
         AddBackgroundView.layer.cornerRadius = AddBackgroundView.frame.width / 2
@@ -67,19 +103,63 @@ class FeedViewController: UIViewController {
         ])
     }
     
-    func AddBtnSet(_ state: Bool, _ alpha: Int) {
-        let currentState = state
-        for addItemBtn in AddItem {
-            addItemBtn.isHidden = currentState
-            addItemBtn.alpha = 1
-        }
-    }
-    
     @IBAction func AddBtn(_ sender: Any) {
         if AddState {
             closeAddBtn()
         } else {
             openAddBtn()
+        }
+    }
+    
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let vc = segue.destination as? PagingMenuViewController {
+//            menuViewController = vc
+//            menuViewController.dataSource = self
+//            menuViewController.delegate = self
+//        } else if let vc = segue.destination as? PagingContentViewController {
+//            contentViewController = vc
+//            contentViewController.dataSource = self
+//            contentViewController.delegate = self
+//        }
+//    }
+//
+//    fileprivate func makeDataSource() -> [(menu: String, content: UIViewController)] {
+//        let myMenuArray = ["재료나눔", "먹방", "요리추천", "전체"]
+//
+//        return myMenuArray.map{
+//            let title = $0
+//
+//            switch title {
+//            case "재료나눔":
+//                let vc = self.storyboard?.instantiateViewController(identifier: "IngrediantShareViewController") as! IngrediantShareViewController
+//                return (menu: title, content: vc)
+//            case "먹방":
+//                let vc = self.storyboard?.instantiateViewController(identifier: "IngrediantShareViewController") as! IngrediantShareViewController
+//                return (menu: title, content: vc)
+//            case "요리추천":
+//                let vc = self.storyboard?.instantiateViewController(identifier: "IngrediantShareViewController") as! IngrediantShareViewController
+//                return (menu: title, content: vc)
+//            case "전체":
+//                let vc = self.storyboard?.instantiateViewController(identifier: "IngrediantShareViewController") as! IngrediantShareViewController
+//                return (menu: title, content: vc)
+//            default:
+//                let vc = self.storyboard?.instantiateViewController(identifier: "IngrediantShareViewController") as! IngrediantShareViewController
+//                return (menu: title, content: vc)
+//            }
+//
+//        }
+//    }
+}
+
+
+// MARK: - AddButtonSetting
+extension FeedViewController {
+    func AddBtnSet(_ state: Bool, _ alpha: Int) {
+        let currentState = state
+        for addItemBtn in AddItem {
+            addItemBtn.isHidden = currentState
+            addItemBtn.alpha = 1
         }
     }
     
@@ -111,9 +191,6 @@ class FeedViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func JournalBtn(_ sender: Any) {
-        print("dgdg")
-    }
     
     private func hideBackSheetAndGoBack() {
         closeAddBtn()
@@ -132,3 +209,46 @@ class FeedViewController: UIViewController {
     }
 }
 
+//// MARK: - Paging Menu Data Source
+//extension FeedViewController: PagingMenuViewControllerDataSource {
+//    func numberOfItemsForMenuViewController(viewController: PagingMenuViewController) -> Int {
+//        return dataSource.count
+//    }
+//
+//    func menuViewController(viewController: PagingMenuViewController, widthForItemAt index: Int) -> CGFloat {
+//        return (self.view.frame.width - 48)/4
+//    }
+//
+//    func menuViewController(viewController: PagingMenuViewController, cellForItemAt index: Int) -> PagingMenuViewCell {
+//        let cell = viewController.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: index) as! MenuCell
+//        cell.titleLabel.text = dataSource[index].menu
+//        cell.titleLabel.font = UIFont.NotoSansCJKkr(type: .bold, size: 12)
+//        return cell
+//    }
+//}
+//
+//// MARK: - Paging Menu Delegate
+//extension FeedViewController: PagingMenuViewControllerDelegate {
+//    func menuViewController(viewController: PagingMenuViewController, didSelect page: Int, previousPage: Int) {
+//
+//        contentViewController.scroll(to: page, animated: true)
+//    }
+//}
+//
+//// MARK: - Paging Content Data Source
+//extension FeedViewController: PagingContentViewControllerDataSource {
+//    func numberOfItemsForContentViewController(viewController: PagingContentViewController) -> Int {
+//        return dataSource.count
+//    }
+//
+//    func contentViewController(viewController: PagingContentViewController, viewControllerAt index: Int) -> UIViewController {
+//        return dataSource[index].content
+//    }
+//}
+//
+//// MARK: - Paging Content Delegate
+//extension FeedViewController: PagingContentViewControllerDelegate {
+//    func contentViewController(viewController: PagingContentViewController, didManualScrollOn index: Int, percent: CGFloat) {
+//        menuViewController.scroll(index: index, percent: percent, animated: false)
+//    }
+//}

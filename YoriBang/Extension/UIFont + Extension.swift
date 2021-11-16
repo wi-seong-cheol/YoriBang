@@ -30,6 +30,7 @@ extension UIFont {
     enum NotoSansCJKkrType {
         case bold
         case medium
+        case regular
         
         var name: String {
             switch self {
@@ -37,6 +38,8 @@ extension UIFont {
                 return "-Bold"
             case .medium:
                 return "-Medium"
+            case .regular:
+                return "-Regular"
             }
         }
     }
