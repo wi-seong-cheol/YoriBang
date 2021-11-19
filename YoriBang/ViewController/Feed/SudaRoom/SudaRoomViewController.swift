@@ -67,19 +67,19 @@ class SudaRoomViewController: UIViewController {
             
             switch title {
             case "재료나눔":
-                let vc = self.storyboard?.instantiateViewController(identifier: "IngrediantShareViewController") as! IngrediantShareViewController
+                let vc = self.storyboard?.instantiateViewController(identifier: "TestViewController") as! TestViewController
                 return (menu: title, content: vc)
             case "먹방":
-                let vc = self.storyboard?.instantiateViewController(identifier: "IngrediantShareViewController") as! IngrediantShareViewController
+                let vc = self.storyboard?.instantiateViewController(identifier: "TestViewController") as! TestViewController
                 return (menu: title, content: vc)
             case "요리추천":
-                let vc = self.storyboard?.instantiateViewController(identifier: "IngrediantShareViewController") as! IngrediantShareViewController
+                let vc = self.storyboard?.instantiateViewController(identifier: "TestViewController") as! TestViewController
                 return (menu: title, content: vc)
             case "전체":
-                let vc = self.storyboard?.instantiateViewController(identifier: "IngrediantShareViewController") as! IngrediantShareViewController
+                let vc = self.storyboard?.instantiateViewController(identifier: "TestViewController") as! TestViewController
                 return (menu: title, content: vc)
             default:
-                let vc = self.storyboard?.instantiateViewController(identifier: "IngrediantShareViewController") as! IngrediantShareViewController
+                let vc = self.storyboard?.instantiateViewController(identifier: "TestViewController") as! TestViewController
                 return (menu: title, content: vc)
             }
             

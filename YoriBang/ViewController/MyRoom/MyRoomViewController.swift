@@ -14,13 +14,13 @@ class MyRoomViewController: UIViewController {
     @IBOutlet weak var AddBackgroundView: UIView!
     @IBOutlet var AddItem: [UIButton]!
     @IBOutlet weak var AddBtn: UIButton!
+    
     private let BackView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.darkGray.withAlphaComponent(0.7)
         return view
     }()
     var AddState = false
-    let shapeLayer = CAShapeLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class MyRoomViewController: UIViewController {
     }
     
     func configure() {
-        //Button Setting
+        // Add Button Setting
         AddBtnSet(true, 1)
         AddBackgroundView.layer.cornerRadius = AddBackgroundView.frame.width / 2
         AddBackgroundView.clipsToBounds = true
@@ -47,14 +47,31 @@ class MyRoomViewController: UIViewController {
         AddBackgroundView.backgroundColor = UIColor(red: 254, green: 139, blue: 88, a: 53)
         
         // BackView
-        view.insertSubview(BackView, at: 12)
+        view.insertSubview(BackView, at: 2)
         BackView.alpha = 0.0
         
         setupLayout()
         let backTap = UITapGestureRecognizer(target: self, action: #selector(dimmedViewTapped(_:)))
         BackView.addGestureRecognizer(backTap)
         BackView.isUserInteractionEnabled = true
-        
+    }
+    
+    @objc func didTapOnMyViewButton(gesture: CustomGesture) {
+        guard let tag = gesture.tag else {
+            print("Tag가 존재하지 않습니다.")
+            return
+        }
+        switch tag {
+        case 0:
+            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "AllRecipeViewController")
+            self.navigationController?.pushViewController(pushVC!, animated: true)
+            break
+        case 1:
+            print(tag)
+            
+        default:
+            break
+        }
     }
     
     private func setupLayout() {
@@ -67,12 +84,10 @@ class MyRoomViewController: UIViewController {
         ])
     }
     
-    func AddBtnSet(_ state: Bool, _ alpha: Int) {
-        let currentState = state
-        for addItemBtn in AddItem {
-            addItemBtn.isHidden = currentState
-            addItemBtn.alpha = 1
-        }
+    @IBAction func AddRecipe(_ sender: Any) {
+        let storyboard = UIStoryboard(name:"Upload", bundle: nil)
+        let pushVC = storyboard.instantiateViewController(withIdentifier: "UploadRecipeViewController")
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     
     @IBAction func AddBtn(_ sender: Any) {
@@ -80,6 +95,18 @@ class MyRoomViewController: UIViewController {
             closeAddBtn()
         } else {
             openAddBtn()
+        }
+    }
+}
+
+
+// MARK: - AddButtonSetting
+extension MyRoomViewController {
+    func AddBtnSet(_ state: Bool, _ alpha: Int) {
+        let currentState = state
+        for addItemBtn in AddItem {
+            addItemBtn.isHidden = currentState
+            addItemBtn.alpha = 1
         }
     }
     
@@ -111,9 +138,6 @@ class MyRoomViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func JournalBtn(_ sender: Any) {
-        print("dgdg")
-    }
     
     private func hideBackSheetAndGoBack() {
         closeAddBtn()
@@ -131,4 +155,3 @@ class MyRoomViewController: UIViewController {
         hideBackSheetAndGoBack()
     }
 }
-

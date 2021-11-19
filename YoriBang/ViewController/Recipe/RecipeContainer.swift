@@ -22,7 +22,12 @@ class RecipeContainer: UIViewController {
 }
 
 extension RecipeContainer: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "RecipeDetailViewController") else {
+            return
+        }
+        self.navigationController?.pushViewController(pushVC, animated: true)
+    }
 }
 
 extension RecipeContainer: UITableViewDataSource {

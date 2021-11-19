@@ -19,7 +19,12 @@ class AlleyViewController: UIViewController {
 
 // MARK: - UICollectionViewDelegate
 extension AlleyViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "AlleyShopDetailViewController") else {
+            return
+        }
+        self.navigationController?.pushViewController(pushVC, animated: true)
+    }
 }
 
 // MARK: - UICollectionViewDataSource

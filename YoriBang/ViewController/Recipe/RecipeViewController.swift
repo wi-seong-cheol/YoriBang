@@ -23,7 +23,6 @@ class RecipeViewController: UIViewController {
         return view
     }()
     var AddState = false
-    let shapeLayer = CAShapeLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
