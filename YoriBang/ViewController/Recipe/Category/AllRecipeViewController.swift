@@ -46,11 +46,14 @@ extension AllRecipeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = AllRecipeTableView.dequeueReusableCell(withIdentifier: AllRecipeTableViewCell.identifier, for: indexPath) as? AllRecipeTableViewCell else {
+        guard let cell = AllRecipeTableView.dequeueReusableCell(withIdentifier: RecipeTableViewCell.identifier, for: indexPath) as? RecipeTableViewCell else {
             return UITableViewCell()
         }
         
         cell.configure()
+        let background = UIView()
+        background.backgroundColor = .clear
+        cell.selectedBackgroundView = background
         return cell
         
     }

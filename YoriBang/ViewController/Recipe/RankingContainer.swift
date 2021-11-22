@@ -10,11 +10,25 @@ import UIKit
 
 class RankingContainer: UIViewController {
     @IBOutlet weak var RankingCollectionView: UICollectionView!
+    @IBOutlet weak var MonthRank: UIButton!
+    @IBOutlet weak var DayRank: UIButton!
+    @IBOutlet weak var More: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configure()
+    }
+    
+    func configure() {
+        // TableView Set
         RankingCollectionView.delegate = self
         RankingCollectionView.dataSource = self
+        
+        // Font Set
+        MonthRank.titleLabel?.font = UIFont.NotoSansCJKkr(type: .bold, size: 14)
+        DayRank.titleLabel?.font = UIFont.NotoSansCJKkr(type: .bold, size: 14)
+        More.titleLabel?.font = UIFont.NotoSansCJKkr(type: .regular, size: 12)
     }
 }
 
@@ -35,9 +49,9 @@ extension RankingContainer: UICollectionViewDataSource {
         
         cell.layer.shadowColor = UIColor.black.cgColor
         cell.layer.shadowOpacity =  0.16
-        cell.layer.shadowRadius = 5
+        cell.layer.shadowRadius = 6
         cell.layer.masksToBounds = false
-        cell.layer.shadowOffset = CGSize(width: 3, height: 3)
+        cell.layer.shadowOffset = CGSize(width: 0, height: 3)
         return cell
     }
 }

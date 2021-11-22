@@ -12,7 +12,7 @@ class AlleyShopDetailViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var scrollView: UIScrollView!
     
-    var images = [#imageLiteral(resourceName: "add_orange_asset"), #imageLiteral(resourceName: "Add_asset")]
+    var images = [UIImage(named: "Add"),UIImage(named: "Add"),UIImage(named: "Add"),UIImage(named: "Add")]
     var imageView = [UIImageView]()
     
     override func viewDidLoad() {
@@ -20,6 +20,18 @@ class AlleyShopDetailViewController: UIViewController {
         scrollView.delegate = self
         addContentScrollView()
         setPageControl()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.tabBarController?.tabBar.isHidden = false
     }
 }
 

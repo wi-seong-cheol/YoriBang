@@ -38,14 +38,6 @@ class FeedViewController: UIViewController {
     func configure() {
         // Add Button Setting
         AddBtnSet(true, 1)
-        AddBackgroundView.layer.cornerRadius = AddBackgroundView.frame.width / 2
-        AddBackgroundView.clipsToBounds = true
-        AddBackgroundView.layer.shadowRadius = AddBackgroundView.frame.width / 2
-        AddBackgroundView.layer.shadowColor = UIColor.black.cgColor
-        AddBackgroundView.layer.shadowOpacity = 0.3
-        AddBackgroundView.layer.borderWidth = 0.1
-        AddBackgroundView.layer.borderColor = UIColor(red: 253, green: 143, blue: 82).cgColor
-        AddBackgroundView.backgroundColor = UIColor(red: 254, green: 139, blue: 88, a: 53)
         
         // BackView
         view.insertSubview(BackView, at: 2)
@@ -55,24 +47,6 @@ class FeedViewController: UIViewController {
         let backTap = UITapGestureRecognizer(target: self, action: #selector(dimmedViewTapped(_:)))
         BackView.addGestureRecognizer(backTap)
         BackView.isUserInteractionEnabled = true
-    }
-    
-    @objc func didTapOnMyViewButton(gesture: CustomGesture) {
-        guard let tag = gesture.tag else {
-            print("Tag가 존재하지 않습니다.")
-            return
-        }
-        switch tag {
-        case 0:
-            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "AllRecipeViewController")
-            self.navigationController?.pushViewController(pushVC!, animated: true)
-            break
-        case 1:
-            print(tag)
-            
-        default:
-            break
-        }
     }
     
     private func setupLayout() {
@@ -111,7 +85,7 @@ extension FeedViewController {
     }
     
     func openAddBtn() {
-        AddBtn.setImage(UIImage(named: "add_white_asset"), for: .normal)
+        AddBtn.setImage(UIImage(named: "AddClick"), for: .normal)
         TabBarViewController.edit = false
         UIView.animate(withDuration: 0.25, animations: {
             self.AddBtnView.transform =  CGAffineTransform(rotationAngle: CGFloat.pi * (1/4))
@@ -123,7 +97,7 @@ extension FeedViewController {
     }
     
     func closeAddBtn() {
-        AddBtn.setImage(UIImage(named: "add_orange_asset"), for: .normal)
+        AddBtn.setImage(UIImage(named: "Add"), for: .normal)
         TabBarViewController.edit = true
         UIView.animate(withDuration: 0.25, animations: {
             self.AddBtnView.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 2)

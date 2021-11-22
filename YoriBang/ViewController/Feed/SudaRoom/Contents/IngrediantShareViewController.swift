@@ -16,6 +16,35 @@ class IngrediantShareViewController: UIViewController {
         ContentTableView.delegate = self
         ContentTableView.dataSource = self
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    @available(iOS 11.0, *)
+    override func viewSafeAreaInsetsDidChange() {
+        super.viewSafeAreaInsetsDidChange()
+        guard let tableViewLayoutMargin = tableViewLayoutMargin else { return }
+        
+        ContentTableView.layoutMargins = tableViewLayoutMargin
+    }
+
+    /// To support safe area, all tableViews aligned on scrollView needs to be set margin for the cell's contentView and separator.
+    @available(iOS 11.0, *)
+    private var tableViewLayoutMargin: UIEdgeInsets? {
+        guard let superview = parent?.view else {
+            return nil
+        }
+        
+        let defaultTableContentInsetLeft: CGFloat = 16
+        return UIEdgeInsets(
+            top: 0,
+            left: superview.safeAreaInsets.left + defaultTableContentInsetLeft,
+            bottom: 0,
+            right: 0
+        )
+    }
 }
 
 extension IngrediantShareViewController: UITableViewDelegate {

@@ -14,6 +14,15 @@ class MyRoomViewController: UIViewController {
     @IBOutlet weak var AddBackgroundView: UIView!
     @IBOutlet var AddItem: [UIButton]!
     @IBOutlet weak var AddBtn: UIButton!
+    @IBOutlet weak var ProfileView: UIView!
+    @IBOutlet weak var MyRoom: UILabel!
+    @IBOutlet weak var Profile: UIImageView!
+    @IBOutlet weak var Nickname: UILabel!
+    @IBOutlet weak var GoProfileLabel: UILabel!
+    @IBOutlet weak var MyProfile: UILabel!
+    @IBOutlet weak var Like: UILabel!
+    @IBOutlet weak var Badge: UILabel!
+    @IBOutlet weak var Setting: UILabel!
     
     private let BackView: UIView = {
         let view = UIView()
@@ -37,14 +46,6 @@ class MyRoomViewController: UIViewController {
     func configure() {
         // Add Button Setting
         AddBtnSet(true, 1)
-        AddBackgroundView.layer.cornerRadius = AddBackgroundView.frame.width / 2
-        AddBackgroundView.clipsToBounds = true
-        AddBackgroundView.layer.shadowRadius = AddBackgroundView.frame.width / 2
-        AddBackgroundView.layer.shadowColor = UIColor.black.cgColor
-        AddBackgroundView.layer.shadowOpacity = 0.3
-        AddBackgroundView.layer.borderWidth = 0.1
-        AddBackgroundView.layer.borderColor = UIColor(red: 253, green: 143, blue: 82).cgColor
-        AddBackgroundView.backgroundColor = UIColor(red: 254, green: 139, blue: 88, a: 53)
         
         // BackView
         view.insertSubview(BackView, at: 2)
@@ -54,6 +55,20 @@ class MyRoomViewController: UIViewController {
         let backTap = UITapGestureRecognizer(target: self, action: #selector(dimmedViewTapped(_:)))
         BackView.addGestureRecognizer(backTap)
         BackView.isUserInteractionEnabled = true
+        
+        // Set Font
+        MyRoom.font = UIFont.NotoSansCJKkr(type: .bold, size: 16)
+        Profile.layer.cornerRadius = Profile.frame.width/2
+        Nickname.font = UIFont.NotoSansCJKkr(type: .medium, size: 14)
+        GoProfileLabel.font = UIFont.NotoSansCJKkr(type: .medium, size: 12)
+        MyProfile.font = UIFont.NotoSansCJKkr(type: .medium, size: 12)
+        Like.font = UIFont.NotoSansCJKkr(type: .medium, size: 12)
+        Badge.font = UIFont.NotoSansCJKkr(type: .medium, size: 12)
+        Setting.font = UIFont.NotoSansCJKkr(type: .medium, size: 12)
+        
+        // Set Event
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.goPage(sender:)))
+        self.ProfileView.addGestureRecognizer(gesture)
     }
     
     @objc func didTapOnMyViewButton(gesture: CustomGesture) {
@@ -97,6 +112,12 @@ class MyRoomViewController: UIViewController {
             openAddBtn()
         }
     }
+    
+    @objc func goPage(sender: UIGestureRecognizer) {
+        let storyboard  = UIStoryboard(name: "Profile", bundle: nil)
+        let vc          = storyboard.instantiateViewController(withIdentifier: "ProfileViewController")
+        self.navigationController!.pushViewController(vc, animated: true)
+    }
 }
 
 
@@ -111,7 +132,7 @@ extension MyRoomViewController {
     }
     
     func openAddBtn() {
-        AddBtn.setImage(UIImage(named: "add_white_asset"), for: .normal)
+        AddBtn.setImage(UIImage(named: "AddClick"), for: .normal)
         TabBarViewController.edit = false
         UIView.animate(withDuration: 0.25, animations: {
             self.AddBtnView.transform =  CGAffineTransform(rotationAngle: CGFloat.pi * (1/4))
@@ -123,7 +144,7 @@ extension MyRoomViewController {
     }
     
     func closeAddBtn() {
-        AddBtn.setImage(UIImage(named: "add_orange_asset"), for: .normal)
+        AddBtn.setImage(UIImage(named: "Add"), for: .normal)
         TabBarViewController.edit = true
         UIView.animate(withDuration: 0.25, animations: {
             self.AddBtnView.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 2)

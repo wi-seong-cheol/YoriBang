@@ -55,11 +55,14 @@ extension UIFont {
     
     enum RobotoType {
         case regular
+        case medium
         
         var name: String {
             switch self {
             case .regular:
                 return "-Regular"
+            case .medium:
+                return "-Medium"
             }
         }
     }

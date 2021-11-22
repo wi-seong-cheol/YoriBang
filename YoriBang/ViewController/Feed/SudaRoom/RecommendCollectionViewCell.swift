@@ -21,11 +21,10 @@ class RecommendCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        ContentView.layer.cornerRadius = 5
+        ContentView.layer.masksToBounds = true
     }
     
     public func configure() {
-        
-        ContentView.layer.cornerRadius = 5
-        ContentView.layer.masksToBounds = true
     }
 }

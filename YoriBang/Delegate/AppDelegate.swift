@@ -38,6 +38,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarControllerDelegate
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {(granted, error) in})
         application.registerForRemoteNotifications()
         
+        // Navigation bar bottom 라인 없애기
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().isTranslucent = true
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        
         return true
     }
     

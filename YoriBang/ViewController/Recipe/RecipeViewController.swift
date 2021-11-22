@@ -9,10 +9,14 @@ import UIKit
 
 class RecipeViewController: UIViewController {
     
+    @IBOutlet weak var TableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var AddBtnView: UIView!
     @IBOutlet weak var AddBackgroundView: UIView!
     @IBOutlet var AddItem: [UIButton]!
     @IBOutlet weak var AddBtn: UIButton!
+    @IBOutlet weak var RecipeTableView: UITableView!
+    @IBOutlet weak var NewRecipe: UILabel!
+    @IBOutlet weak var More: UIButton!
     @IBOutlet var CategoryLabel: [UILabel]!
     
     @IBOutlet var Category: [UIView]!
@@ -37,16 +41,19 @@ class RecipeViewController: UIViewController {
     }
     
     func configure() {
+        // Set TableView
+        RecipeTableView.delegate = self
+        RecipeTableView.dataSource = self
+        DispatchQueue.main.async {
+            self.TableViewHeight.constant = self.RecipeTableView.contentSize.height + 10
+        }
+        
+        // Set Font
+        NewRecipe.font = UIFont.NotoSansCJKkr(type: .bold, size: 14)
+        More.titleLabel?.font = UIFont.NotoSansCJKkr(type: .regular, size: 12)
+        
         // Add Button Setting
         AddBtnSet(true, 1)
-        AddBackgroundView.layer.cornerRadius = AddBackgroundView.frame.width / 2
-        AddBackgroundView.clipsToBounds = true
-        AddBackgroundView.layer.shadowRadius = AddBackgroundView.frame.width / 2
-        AddBackgroundView.layer.shadowColor = UIColor.black.cgColor
-        AddBackgroundView.layer.shadowOpacity = 0.3
-        AddBackgroundView.layer.borderWidth = 0.1
-        AddBackgroundView.layer.borderColor = UIColor(red: 253, green: 143, blue: 82).cgColor
-        AddBackgroundView.backgroundColor = UIColor(red: 254, green: 139, blue: 88, a: 53)
         
         // BackView
         view.insertSubview(BackView, at: 2)
@@ -66,6 +73,7 @@ class RecipeViewController: UIViewController {
             tapOnMyViewButton.tag = categoryView.tag
             categoryView.addGestureRecognizer(tapOnMyViewButton)
         }
+        
     }
     
     @objc func didTapOnMyViewButton(gesture: CustomGesture) {
@@ -122,7 +130,7 @@ extension RecipeViewController {
     }
     
     func openAddBtn() {
-        AddBtn.setImage(UIImage(named: "add_white_asset"), for: .normal)
+        AddBtn.setImage(UIImage(named: "AddClick"), for: .normal)
         TabBarViewController.edit = false
         UIView.animate(withDuration: 0.25, animations: {
             self.AddBtnView.transform =  CGAffineTransform(rotationAngle: CGFloat.pi * (1/4))
@@ -134,7 +142,7 @@ extension RecipeViewController {
     }
     
     func closeAddBtn() {
-        AddBtn.setImage(UIImage(named: "add_orange_asset"), for: .normal)
+        AddBtn.setImage(UIImage(named: "Add"), for: .normal)
         TabBarViewController.edit = true
         UIView.animate(withDuration: 0.25, animations: {
             self.AddBtnView.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 2)
@@ -172,3 +180,29 @@ extension RecipeViewController {
     
 }
 
+extension RecipeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "RecipeDetailViewController") else {
+            return
+        }
+        self.navigationController?.pushViewController(pushVC, animated: true)
+    }
+}
+
+extension RecipeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = RecipeTableView.dequeueReusableCell(withIdentifier: NewRecipeTableViewCell.identifier, for: indexPath) as? NewRecipeTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        cell.configure(with: UIImage(), profile: UIImage(), title: "gg", nickname: "gg", time: "gg")
+        let background = UIView()
+        background.backgroundColor = .clear
+        cell.selectedBackgroundView = background
+        return cell
+    }
+}

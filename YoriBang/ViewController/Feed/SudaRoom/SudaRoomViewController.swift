@@ -14,16 +14,26 @@ class SudaRoomViewController: UIViewController {
     var menuViewController: PagingMenuViewController!
     var contentViewController: PagingContentViewController!
     
-    static var viewController: (UIColor) -> UIViewController = { (color) in
-        let vc = UIViewController()
-        vc.view.backgroundColor = color
-        return vc
-    }
-    
-    var dataSource = [(menu: String, content: UIViewController)]() {
-        didSet{
-            menuViewController.reloadData()
-            contentViewController.reloadData()
+    let dataSource: [(menu: String, content: UIViewController)] = ["재료나눔", "먹방", "요리추천", "전체"].map {
+        
+        let title = $0
+        
+        switch title {
+        case "재료나눔":
+            let vc = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(identifier: "IngrediantShareViewController") as! IngrediantShareViewController
+            return (menu: title, content: vc)
+        case "먹방":
+            let vc = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(identifier: "TestViewController") as! TestViewController
+            return (menu: title, content: vc)
+        case "요리추천":
+            let vc = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(identifier: "TestViewController") as! TestViewController
+            return (menu: title, content: vc)
+        case "전체":
+            let vc = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(identifier: "TestViewController") as! TestViewController
+            return (menu: title, content: vc)
+        default:
+            let vc = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(identifier: "TestViewController") as! TestViewController
+            return (menu: title, content: vc)
         }
     }
     
@@ -43,7 +53,6 @@ class SudaRoomViewController: UIViewController {
         
         menuViewController.register(nib: UINib(nibName: "MenuCell", bundle: nil), forCellWithReuseIdentifier: "MenuCell")
         menuViewController.registerFocusView(nib: UINib(nibName: "FocusView", bundle: nil))
-        dataSource = makeDataSource()
         contentViewController.scrollView.isScrollEnabled = true
     }
     
@@ -56,33 +65,6 @@ class SudaRoomViewController: UIViewController {
             contentViewController = vc
             contentViewController.dataSource = self
             contentViewController.delegate = self
-        }
-    }
-    
-    fileprivate func makeDataSource() -> [(menu: String, content: UIViewController)] {
-        let myMenuArray = ["재료나눔", "먹방", "요리추천", "전체"]
-        
-        return myMenuArray.map{
-            let title = $0
-            
-            switch title {
-            case "재료나눔":
-                let vc = self.storyboard?.instantiateViewController(identifier: "TestViewController") as! TestViewController
-                return (menu: title, content: vc)
-            case "먹방":
-                let vc = self.storyboard?.instantiateViewController(identifier: "TestViewController") as! TestViewController
-                return (menu: title, content: vc)
-            case "요리추천":
-                let vc = self.storyboard?.instantiateViewController(identifier: "TestViewController") as! TestViewController
-                return (menu: title, content: vc)
-            case "전체":
-                let vc = self.storyboard?.instantiateViewController(identifier: "TestViewController") as! TestViewController
-                return (menu: title, content: vc)
-            default:
-                let vc = self.storyboard?.instantiateViewController(identifier: "TestViewController") as! TestViewController
-                return (menu: title, content: vc)
-            }
-            
         }
     }
 }
