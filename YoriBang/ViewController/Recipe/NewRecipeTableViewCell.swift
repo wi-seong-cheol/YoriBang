@@ -8,7 +8,7 @@
 import UIKit
 
 class NewRecipeTableViewCell: UITableViewCell {
-    static let identifier = "RecipeTableViewCell"
+    static let identifier = "NewRecipeTableViewCell"
     
     @IBOutlet weak var ShadowView: UIView!
     @IBOutlet weak var RecipeView: UIView!
