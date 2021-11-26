@@ -12,11 +12,11 @@ import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarControllerDelegate {
     
-    
+    var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        FirebaseApp.configure()
+//        FirebaseApp.configure()
         
 //        if #available(iOS 10.0, *) {
 //            // For iOS 10 display notification (sent via APNS)
@@ -35,6 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarControllerDelegate
 //        UIUserNotificationSettings =
 //        UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
 //        application.registerUserNotificationSettings(settings)
+        
+        //---------------------------- 다크모드해제 ---------------------------/
+        self.window?.overrideUserInterfaceStyle = .light
+
+        
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {(granted, error) in})
         application.registerForRemoteNotifications()
         

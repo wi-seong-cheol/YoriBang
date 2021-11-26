@@ -22,6 +22,10 @@ class JoinViewController: UIViewController {
     @IBOutlet weak var AndLabel: UILabel!
     @IBOutlet weak var OkLabel: UIButton!
     
+    var mainTimer:Timer?
+    let firstSecond: Int = 180
+    var counter: Int = 0
+    
     private var verificationID: String?
     
     override func viewDidLoad() {
@@ -55,35 +59,88 @@ class JoinViewController: UIViewController {
         attribute = NSMutableAttributedString(string: PrivacyText ?? "")
         attribute.addAttribute(NSMutableAttributedString.Key.underlineStyle, value: underLine, range: NSRange(location: 0, length: PrivacyText!.count))
         Privacy.setAttributedTitle(attribute, for: .normal)
+        
+        // Set Keyboard
+        let tapGuesterHideKeyboard = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        self.view.addGestureRecognizer(tapGuesterHideKeyboard)
+        
     }
     
     @IBAction func sendBtn(_ sender: Any) {
-        PhoneAuthProvider.provider()
-            .verifyPhoneNumber(PhoneNumberTextField.text ?? "", uiDelegate: nil) { verification, error in
-                if error == nil {
-                    self.verificationID = verification
-                    return
-                } else {
-                    print("Phone Verification Error:\(error.debugDescription)")
-                }
-            }
-    }
-    
-    @IBAction func verificationBtn(_ sender: Any) {
-        let credential = PhoneAuthProvider.provider().credential(
-            withVerificationID: verificationID ?? "",
-            verificationCode: VerificationCodeTextField.text ?? ""
-        )
+        let phoneNumber = getPhoneNumberFormat()
         
-        Auth.auth().signIn(with: credential) { authResult, error in
-            if error == nil {
-                print(authResult ?? "")
-                print("User Sign in..")
-                UserDefaults.standard.set(self.verificationID, forKey: "authVerificationID")
+        Count.textColor = .red
+        
+        DataSource.shared.sendVerificationCode(phoneNumber) { succeed, failed in
+            if succeed {
+                self.startTimer()
+                self.OKDialog("인증번호가 발송되었습니다.")
             } else {
-                print(error.debugDescription)
+                self.OKDialog("인증번호가 발송에 실패했습니다 번호를 확인해주세요.")
             }
         }
     }
     
+    // Keyboard handler
+    @objc func hideKeyboard() {
+        PhoneNumberTextField.resignFirstResponder()
+        VerificationCodeTextField.resignFirstResponder()
+    }
+
+    func stop() {
+        mainTimer?.invalidate()
+        mainTimer = nil
+    }
+    
+    @IBAction func verificationBtn(_ sender: Any) {
+        
+        let phoneNumber = getPhoneNumberFormat()
+        let verficationCode = VerificationCodeTextField.text ?? ""
+        
+        DataSource.shared.login(phoneNumber, verficationCode) { succeed, failed in
+            if succeed != "" {
+                DataSource.shared.signIn(succeed) { succeed, failed in
+                    if succeed {
+                        print("success")
+                    }
+                }
+            } else {
+                print("failed")
+            }
+        }
+        
+    }
+    
+    func startTimer() {
+        mainTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            self.counter += 1
+            let second = self.firstSecond - self.counter
+            let minute = second/60
+            DispatchQueue.main.async {
+                self.Count.text = String(minute) + ":" + String(format: "%02d", second%60)
+            }
+            if second == 0 {
+                self.stop()
+            }
+        }
+    }
+    
+    func getPhoneNumberFormat() -> String {
+        var phoneNumber = PhoneNumberTextField.text ?? ""
+        phoneNumber.remove(at: phoneNumber.startIndex)
+        let phoneNumberFormat = "+82" + phoneNumber
+        return phoneNumberFormat
+    }
+    
+    @IBAction func openServiceTerms(_ sender: Any) {
+        if let url = URL(string: "http://goolge.com") {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+    
+    @IBAction func openPrivacy(_ sender: Any) {
+        if let url = URL(string: "http://goolge.com") {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
 }

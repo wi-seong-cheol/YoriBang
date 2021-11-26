@@ -37,18 +37,25 @@ class MyRoomViewController: UIViewController {
         configure()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        hideBackSheetAndGoBack()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.navigationController?.isNavigationBarHidden = true
     }
     
     func configure() {
+        // Set Navigation
+        self.navigationItem.backBarButtonItem = UIBarButtonItem.BackButton()
+        
         // Add Button Setting
         AddBtnSet(true, 1)
         
         // BackView
-        view.insertSubview(BackView, at: 2)
+        view.insertSubview(BackView, at: 11)
         BackView.alpha = 0.0
         
         setupLayout()
@@ -58,13 +65,18 @@ class MyRoomViewController: UIViewController {
         
         // Set Font
         MyRoom.font = UIFont.NotoSansCJKkr(type: .bold, size: 16)
-        Profile.layer.cornerRadius = Profile.frame.width/2
         Nickname.font = UIFont.NotoSansCJKkr(type: .medium, size: 14)
         GoProfileLabel.font = UIFont.NotoSansCJKkr(type: .medium, size: 12)
         MyProfile.font = UIFont.NotoSansCJKkr(type: .medium, size: 12)
         Like.font = UIFont.NotoSansCJKkr(type: .medium, size: 12)
         Badge.font = UIFont.NotoSansCJKkr(type: .medium, size: 12)
         Setting.font = UIFont.NotoSansCJKkr(type: .medium, size: 12)
+        
+        // Set View
+        Profile.layer.cornerRadius = Profile.frame.width/2
+        Profile.layer.cornerRadius = Profile.frame.width/2
+        Profile.layer.borderColor = UIColor(red: 229, green: 102, blue: 80).cgColor
+        Profile.layer.borderWidth = 1
         
         // Set Event
         let gesture = UITapGestureRecognizer(target: self, action: #selector(self.goPage(sender:)))
@@ -100,9 +112,12 @@ class MyRoomViewController: UIViewController {
     }
     
     @IBAction func AddRecipe(_ sender: Any) {
-        let storyboard = UIStoryboard(name:"Upload", bundle: nil)
-        let pushVC = storyboard.instantiateViewController(withIdentifier: "UploadRecipeViewController")
-        self.navigationController?.pushViewController(pushVC, animated: true)
+        hideBackSheetAndGoBack()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            let storyboard = UIStoryboard(name:"Upload", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "UploadRecipeViewController")
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func AddBtn(_ sender: Any) {

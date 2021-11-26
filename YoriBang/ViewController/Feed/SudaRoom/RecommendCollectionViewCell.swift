@@ -20,11 +20,17 @@ class RecommendCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        ContentView.layer.cornerRadius = 5
-        ContentView.layer.masksToBounds = true
     }
     
     public func configure() {
+        ContentView.layer.cornerRadius = 5
+        ContentView.layer.masksToBounds = true
+        
+        // Set Font
+        TitleLabel.font = UIFont.NotoSansCJKkr(type: .medium, size: 12)
+        Content.font = UIFont.NotoSansCJKkr(type: .medium, size: 10)
+        Attention.font = UIFont.NotoSansCJKkr(type: .regular, size: 7)
+        Comment.font = UIFont.NotoSansCJKkr(type: .regular, size: 7)
+        
     }
 }

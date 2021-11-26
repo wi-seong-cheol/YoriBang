@@ -21,7 +21,18 @@ class UserManagementInterceptor: ApolloInterceptor {
         response: HTTPResponse<Operation>?,
         completion: @escaping (Result<GraphQLResult<Operation.Data>, Error>) -> Void) {
         
-        request.addHeader(name: "Authorization", value: "\(token)")
+        request.addHeader(name: "Authorization", value: "Bearer \(token)")
+        chain.proceedAsync(request: request,
+                           response: response,
+                           completion: completion)
+    }
+    
+    private func noUser<Operation: GraphQLOperation>(
+        to request: HTTPRequest<Operation>,
+        chain: RequestChain,
+        response: HTTPResponse<Operation>?,
+        completion: @escaping (Result<GraphQLResult<Operation.Data>, Error>) -> Void) {
+        
         chain.proceedAsync(request: request,
                            response: response,
                            completion: completion)
@@ -37,10 +48,7 @@ class UserManagementInterceptor: ApolloInterceptor {
                 UserDefaults.standard.string(forKey: "loginToken") else {
             // In this instance, no user is logged in, so we want to call
             // the error handler, then return to prevent further work
-            chain.handleErrorAsync(UserError.noUserLoggedIn,
-                                   request: request,
-                                   response: response,
-                                   completion: completion)
+                    self.noUser(to: request, chain: chain, response: response, completion: completion)
             return
         }
         self.addTokenAndProceed(token,

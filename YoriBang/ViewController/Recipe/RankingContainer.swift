@@ -33,7 +33,12 @@ class RankingContainer: UIViewController {
 }
 
 extension RankingContainer: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "RecipeDetailViewController") else {
+            return
+        }
+        self.navigationController?.pushViewController(pushVC, animated: true)
+    }
 }
 
 extension RankingContainer: UICollectionViewDataSource {

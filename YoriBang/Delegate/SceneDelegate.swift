@@ -56,9 +56,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 extension SceneDelegate {
     private func setRootViewController(_ scene: UIScene){
-        if Storage.isFirstTime() {
+        let state = false//Storage.isFirstTime()
+        if state {
             setRootViewController(scene, name: "Main",
-                                  identifier: "TabBarViewController")
+                                  identifier: "SignViewController")
         } else {
             setRootViewController(scene, name: "Main",
                                   identifier: "TabBarViewController")

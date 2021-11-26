@@ -86,5 +86,7 @@
 		<string>NotoSansCJKkr-Regular.otf</string>
 		<string>NotoSansCJKkr-Medium.otf</string>
 	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>

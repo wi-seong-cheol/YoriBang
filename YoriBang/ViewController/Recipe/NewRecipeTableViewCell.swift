@@ -34,10 +34,14 @@ class NewRecipeTableViewCell: UITableViewCell {
         Profile.layer.cornerRadius = Profile.frame.width/2
     }
     
-    public func configure(with thumbnail: UIImage, profile: UIImage, title: String, nickname: String, time: String) {
-        self.TitleLabel.text = title
-        self.Nickname.text = nickname
-        self.Time.text = time
-        
+    public func configure(with recipeModel: RecipeModel) {
+        let height =  ThumbNail.frame.height - 20
+        let width = ThumbNail.frame.width
+//        CGFloat scale = UIScreen.main.scale
+        self.ThumbNail.image = recipeModel.thumbNail.crop(rect: CGRect(x: 0, y: 0, width: width, height: height))
+        self.TitleLabel.text = recipeModel.title
+        self.Time.text = recipeModel.cookTime
+        self.Profile.image = recipeModel.writer.profile
+        self.Nickname.text = recipeModel.writer.nickName
     }
 }

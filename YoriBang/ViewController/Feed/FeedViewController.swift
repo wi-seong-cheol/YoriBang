@@ -15,6 +15,7 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var AddBackgroundView: UIView!
     @IBOutlet var AddItem: [UIButton]!
     @IBOutlet weak var AddBtn: UIButton!
+    @IBOutlet weak var SudaLabel: UILabel!
     
     private let BackView: UIView = {
         let view = UIView()
@@ -29,6 +30,11 @@ class FeedViewController: UIViewController {
         configure()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        hideBackSheetAndGoBack()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -36,17 +42,23 @@ class FeedViewController: UIViewController {
     }
     
     func configure() {
+        // Set Navigation
+        self.navigationItem.backBarButtonItem = UIBarButtonItem.BackButton()
+        
         // Add Button Setting
         AddBtnSet(true, 1)
         
         // BackView
-        view.insertSubview(BackView, at: 2)
+        view.insertSubview(BackView, at: 4)
         BackView.alpha = 0.0
         
         setupLayout()
         let backTap = UITapGestureRecognizer(target: self, action: #selector(dimmedViewTapped(_:)))
         BackView.addGestureRecognizer(backTap)
         BackView.isUserInteractionEnabled = true
+        
+        //Set Font
+        SudaLabel.font = UIFont.NotoSansCJKkr(type: .bold, size: 14)
     }
     
     private func setupLayout() {
@@ -60,9 +72,12 @@ class FeedViewController: UIViewController {
     }
     
     @IBAction func AddRecipe(_ sender: Any) {
-        let storyboard = UIStoryboard(name:"Upload", bundle: nil)
-        let pushVC = storyboard.instantiateViewController(withIdentifier: "UploadRecipeViewController")
-        self.navigationController?.pushViewController(pushVC, animated: true)
+        hideBackSheetAndGoBack()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            let storyboard = UIStoryboard(name:"Upload", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "UploadRecipeViewController")
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func AddBtn(_ sender: Any) {

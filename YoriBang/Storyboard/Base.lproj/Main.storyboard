@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ry5-aE-Doy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4lo-WY-Ygg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -163,7 +163,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="123456" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M9e-YC-PKh">
-                                <rect key="frame" x="24" y="313.5" width="325.5" height="18.5"/>
+                                <rect key="frame" x="24" y="313.5" width="326" height="18.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -187,7 +187,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTE-Yc-ixf">
-                                <rect key="frame" x="43.5" y="399" width="327" height="40"/>
+                                <rect key="frame" x="43.5" y="429" width="327" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="327" id="WHN-1D-rbh"/>
                                     <constraint firstAttribute="height" constant="40" id="u0E-8d-uyl"/>
@@ -199,8 +199,8 @@
                                     <action selector="verificationBtn:" destination="4lo-WY-Ygg" eventType="touchUpInside" id="965-rq-p7c"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psu-xp-93v">
-                                <rect key="frame" x="359.5" y="315" width="30.5" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psu-xp-93v">
+                                <rect key="frame" x="360" y="315" width="30" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -234,7 +234,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iA7-Fz-mDs">
-                                <rect key="frame" x="91.5" y="449" width="231.5" height="30"/>
+                                <rect key="frame" x="91.5" y="389" width="231.5" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxr-wx-wBi">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
@@ -242,6 +242,9 @@
                                         <state key="normal" title="서비스 이용약관">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openServiceTerms:" destination="4lo-WY-Ygg" eventType="touchUpInside" id="19b-dN-ohE"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="및" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGx-3t-T7d">
                                         <rect key="frame" x="103" y="0.0" width="12.5" height="30"/>
@@ -254,6 +257,9 @@
                                         <state key="normal" title="개인정보 취급방침">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openPrivacy:" destination="4lo-WY-Ygg" eventType="touchUpInside" id="USJ-Mb-029"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -265,18 +271,18 @@
                             <constraint firstItem="tfJ-cd-7fN" firstAttribute="leading" secondItem="fWu-uS-tVh" secondAttribute="leading" constant="24" id="1vb-45-sd9"/>
                             <constraint firstItem="0E0-9n-6Yk" firstAttribute="top" secondItem="03v-4q-Tcv" secondAttribute="bottom" constant="47" id="2eO-B9-iGM"/>
                             <constraint firstItem="fWu-uS-tVh" firstAttribute="trailing" secondItem="psu-xp-93v" secondAttribute="trailing" constant="24" id="6oW-Vz-jhy"/>
-                            <constraint firstItem="iA7-Fz-mDs" firstAttribute="top" secondItem="fTE-Yc-ixf" secondAttribute="bottom" constant="10" id="BE9-6H-Gg3"/>
                             <constraint firstItem="imz-on-rxC" firstAttribute="leading" secondItem="fWu-uS-tVh" secondAttribute="leading" constant="24" id="Cyq-AT-hng"/>
                             <constraint firstItem="fWu-uS-tVh" firstAttribute="trailing" secondItem="tO1-C3-mLU" secondAttribute="trailing" constant="24" id="DgH-83-Aok"/>
+                            <constraint firstItem="iA7-Fz-mDs" firstAttribute="top" secondItem="imz-on-rxC" secondAttribute="bottom" constant="50" id="Eye-Zg-stZ"/>
                             <constraint firstItem="fWu-uS-tVh" firstAttribute="trailing" secondItem="0E0-9n-6Yk" secondAttribute="trailing" priority="500" constant="270.5" id="J22-ZM-lsk"/>
                             <constraint firstItem="tO1-C3-mLU" firstAttribute="leading" secondItem="5h3-aD-fs3" secondAttribute="trailing" priority="500" constant="151" id="O6S-Eu-j7f"/>
                             <constraint firstItem="03v-4q-Tcv" firstAttribute="leading" secondItem="YLl-6Q-Bsv" secondAttribute="leading" constant="24" id="Q92-Qj-9jD"/>
                             <constraint firstItem="5h3-aD-fs3" firstAttribute="leading" secondItem="fWu-uS-tVh" secondAttribute="leading" constant="24" id="Szf-vD-LWl"/>
                             <constraint firstItem="tO1-C3-mLU" firstAttribute="leading" secondItem="oU1-RR-Ub2" secondAttribute="trailing" priority="750" constant="10" id="Vwn-wX-Hiv"/>
+                            <constraint firstItem="fTE-Yc-ixf" firstAttribute="top" secondItem="iA7-Fz-mDs" secondAttribute="bottom" constant="10" id="ccx-zV-FqX"/>
                             <constraint firstAttribute="trailing" secondItem="03v-4q-Tcv" secondAttribute="trailing" constant="24" id="d7a-F5-PDv"/>
                             <constraint firstItem="fWu-uS-tVh" firstAttribute="trailing" secondItem="tfJ-cd-7fN" secondAttribute="trailing" priority="500" constant="241.5" id="dtN-gP-miX"/>
                             <constraint firstItem="5h3-aD-fs3" firstAttribute="top" secondItem="tfJ-cd-7fN" secondAttribute="bottom" constant="60" id="egX-5C-KBe"/>
-                            <constraint firstItem="fTE-Yc-ixf" firstAttribute="top" secondItem="imz-on-rxC" secondAttribute="bottom" constant="60" id="f2N-zC-EX8"/>
                             <constraint firstItem="iA7-Fz-mDs" firstAttribute="centerX" secondItem="YLl-6Q-Bsv" secondAttribute="centerX" id="gjE-do-LxY"/>
                             <constraint firstItem="03v-4q-Tcv" firstAttribute="top" secondItem="tO1-C3-mLU" secondAttribute="bottom" constant="8.5" id="kik-SX-oiQ"/>
                             <constraint firstItem="imz-on-rxC" firstAttribute="top" secondItem="M9e-YC-PKh" secondAttribute="bottom" constant="6" id="lIs-Hm-3Q1"/>

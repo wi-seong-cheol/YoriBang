@@ -12,6 +12,7 @@ class JournalViewController: UIViewController {
     
     @IBOutlet weak var TableView: UITableView!
     
+    @IBOutlet weak var TitleLabel: UILabel!
     @IBOutlet weak var AddBtnView: UIView!
     @IBOutlet weak var AddBackgroundView: UIView!
     @IBOutlet var AddItem: [UIButton]!
@@ -30,6 +31,12 @@ class JournalViewController: UIViewController {
         configure()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        hideBackSheetAndGoBack()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -37,6 +44,9 @@ class JournalViewController: UIViewController {
     }
     
     func configure() {
+        // Set Navigation
+        self.navigationItem.backBarButtonItem = UIBarButtonItem.BackButton()
+        
         // TableView Setting
         TableView.delegate = self
         TableView.dataSource = self
@@ -45,13 +55,16 @@ class JournalViewController: UIViewController {
         AddBtnSet(true, 1)
         
         // BackView
-        view.insertSubview(BackView, at: 1)
+        view.insertSubview(BackView, at: 2)
         BackView.alpha = 0.0
         
         setupLayout()
         let backTap = UITapGestureRecognizer(target: self, action: #selector(dimmedViewTapped(_:)))
         BackView.addGestureRecognizer(backTap)
         BackView.isUserInteractionEnabled = true
+        
+        // Set Font
+        TitleLabel.font = UIFont.NotoSansCJKkr(type: .bold, size: 16)
     }
     
     private func setupLayout() {
@@ -65,9 +78,12 @@ class JournalViewController: UIViewController {
     }
     
     @IBAction func AddRecipe(_ sender: Any) {
-        let storyboard = UIStoryboard(name:"Upload", bundle: nil)
-        let pushVC = storyboard.instantiateViewController(withIdentifier: "UploadRecipeViewController")
-        self.navigationController?.pushViewController(pushVC, animated: true)
+        hideBackSheetAndGoBack()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            let storyboard = UIStoryboard(name:"Upload", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "UploadRecipeViewController")
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func AddBtn(_ sender: Any) {
@@ -91,7 +107,6 @@ extension JournalViewController {
     
     func openAddBtn() {
         AddBtn.setImage(UIImage(named: "AddClick"), for: .normal)
-        TabBarViewController.edit = false
         UIView.animate(withDuration: 0.25, animations: {
             self.AddBtnView.transform =  CGAffineTransform(rotationAngle: CGFloat.pi * (1/4))
             self.AddBackgroundView.transform = CGAffineTransform(scaleX: 5, y: 5)
@@ -137,7 +152,11 @@ extension JournalViewController {
 
 // MARK: - TableView Delegate
 extension JournalViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name:"Detail", bundle: nil)
+        let pushVC = storyboard.instantiateViewController(withIdentifier: "PostDetailViewController")
+        self.navigationController?.pushViewController(pushVC, animated: true)
+    }
 }
 
 // MARK: - TableView DataSource
@@ -152,6 +171,9 @@ extension JournalViewController: UITableViewDataSource {
         }
 
         cell.configure()
+        let background = UIView()
+        background.backgroundColor = .clear
+        cell.selectedBackgroundView = background
         return cell
     }
 }

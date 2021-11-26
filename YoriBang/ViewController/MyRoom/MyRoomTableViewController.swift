@@ -36,6 +36,8 @@ class MyRoomTableViewController: UITableViewController {
                 MyRoomTableViewController.performSegue(withIdentifier: "AlleyRadiusVC", sender: indexPath.row)
             case 3:
                 MyRoomTableViewController.performSegue(withIdentifier: "faqVC", sender: indexPath.row)
+            case 4:
+                MyRoomTableViewController.performSegue(withIdentifier: "noticeVC", sender: indexPath.row)
             default:
                 return
             }

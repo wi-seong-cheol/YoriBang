@@ -13,6 +13,10 @@ class ProfileViewController: UIViewController {
     
     var menuViewController: PagingMenuViewController!
     var contentViewController: PagingContentViewController!
+    @IBOutlet weak var Profile: UIImageView!
+    @IBOutlet weak var Nickname: UILabel!
+    @IBOutlet weak var Follower: UILabel!
+    
     
     let dataSource: [(menu: String, content: UIViewController)] = ["요리일지", "요리터", "레시피"].map {
         
@@ -20,13 +24,13 @@ class ProfileViewController: UIViewController {
         
         switch title {
         case "요리일지":
-            let vc = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(identifier: "IngrediantShareViewController") as! IngrediantShareViewController
+            let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(identifier: "ProfileDiaryViewController") as! ProfileDiaryViewController
             return (menu: title, content: vc)
         case "요리터":
-            let vc = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(identifier: "TestViewController") as! TestViewController
+            let vc = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(identifier: "IngrediantShareViewController") as! IngrediantShareViewController
             return (menu: title, content: vc)
         case "레시피":
-            let vc = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(identifier: "TestViewController") as! TestViewController
+            let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(identifier: "ProfileRecipeViewController") as! ProfileRecipeViewController
             return (menu: title, content: vc)
         default:
             let vc = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(identifier: "TestViewController") as! TestViewController
@@ -52,9 +56,23 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configure()
+    }
+    
+    func configure() {
+        // Set Paging Kit
         menuViewController.register(nib: UINib(nibName: "MenuCell", bundle: nil), forCellWithReuseIdentifier: "MenuCell")
         menuViewController.registerFocusView(nib: UINib(nibName: "FocusView", bundle: nil))
         contentViewController.scrollView.isScrollEnabled = true
+        
+        // Set View
+        Profile.layer.cornerRadius = Profile.frame.width/2
+        Profile.layer.borderColor = UIColor(red: 229, green: 102, blue: 80).cgColor
+        Profile.layer.borderWidth = 1
+        
+        // Set Font
+        Nickname.font = UIFont.NotoSansCJKkr(type: .medium, size: 14)
+        Follower.font = UIFont.NotoSansCJKkr(type: .medium, size: 10)
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -20,6 +20,12 @@ target 'YoriBang' do
   # Pods for TabBarAnimation
   pod 'RAMAnimatedTabBarController'
   
+  # pod CropViewController
+  pod 'CropViewController'
+  
+  # pod NVActivityIndicatorView
+  pod 'NVActivityIndicatorView'
+  
   # Pods for PagingKit
   pod "PagingKit"  
   

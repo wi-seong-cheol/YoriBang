@@ -23,13 +23,13 @@ class SudaRoomViewController: UIViewController {
             let vc = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(identifier: "IngrediantShareViewController") as! IngrediantShareViewController
             return (menu: title, content: vc)
         case "먹방":
-            let vc = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(identifier: "TestViewController") as! TestViewController
+            let vc = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(identifier: "IngrediantShareViewController") as! IngrediantShareViewController
             return (menu: title, content: vc)
         case "요리추천":
-            let vc = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(identifier: "TestViewController") as! TestViewController
+            let vc = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(identifier: "IngrediantShareViewController") as! IngrediantShareViewController
             return (menu: title, content: vc)
         case "전체":
-            let vc = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(identifier: "TestViewController") as! TestViewController
+            let vc = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(identifier: "IngrediantShareViewController") as! IngrediantShareViewController
             return (menu: title, content: vc)
         default:
             let vc = UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(identifier: "TestViewController") as! TestViewController

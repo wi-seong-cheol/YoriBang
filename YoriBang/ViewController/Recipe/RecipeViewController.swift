@@ -18,8 +18,9 @@ class RecipeViewController: UIViewController {
     @IBOutlet weak var NewRecipe: UILabel!
     @IBOutlet weak var More: UIButton!
     @IBOutlet var CategoryLabel: [UILabel]!
-    
     @IBOutlet var Category: [UIView]!
+    
+    var newRecipe = [RecipeModel]()
     
     private let BackView: UIView = {
         let view = UIView()
@@ -34,6 +35,11 @@ class RecipeViewController: UIViewController {
         configure()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        hideBackSheetAndGoBack()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -41,6 +47,11 @@ class RecipeViewController: UIViewController {
     }
     
     func configure() {
+        newRecipe = GetData.shared.getRecipe()
+        
+        // Set Navigation
+        self.navigationItem.backBarButtonItem = UIBarButtonItem.BackButton()
+        
         // Set TableView
         RecipeTableView.delegate = self
         RecipeTableView.dataSource = self
@@ -85,10 +96,17 @@ class RecipeViewController: UIViewController {
         case 0:
             let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "AllRecipeViewController")
             self.navigationController?.pushViewController(pushVC!, animated: true)
-            break
         case 1:
-            print(tag)
-            
+            break
+        case 2:
+            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "TownViewController")
+            self.navigationController?.pushViewController(pushVC!, animated: true)
+        case 3:
+            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "OfficialViewController")
+            self.navigationController?.pushViewController(pushVC!, animated: true)
+        case 4:
+            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "CountryViewController")
+            self.navigationController?.pushViewController(pushVC!, animated: true)
         default:
             break
         }
@@ -103,11 +121,24 @@ class RecipeViewController: UIViewController {
             BackView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
+}
+
+// MARK: - Set Button Action
+extension RecipeViewController {
+    
+    @IBAction func MoreNewRecipe(_ sender: Any) {
+        closeAddBtn()
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "AllRecipeViewController")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
+    }
     
     @IBAction func AddRecipe(_ sender: Any) {
-        let storyboard = UIStoryboard(name:"Upload", bundle: nil)
-        let pushVC = storyboard.instantiateViewController(withIdentifier: "UploadRecipeViewController")
-        self.navigationController?.pushViewController(pushVC, animated: true)
+        hideBackSheetAndGoBack()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            let storyboard = UIStoryboard(name:"Upload", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "UploadRecipeViewController")
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func AddBtn(_ sender: Any) {
@@ -199,7 +230,7 @@ extension RecipeViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.configure(with: UIImage(), profile: UIImage(), title: "gg", nickname: "gg", time: "gg")
+        cell.configure(with: newRecipe[indexPath.row])
         let background = UIView()
         background.backgroundColor = .clear
         cell.selectedBackgroundView = background

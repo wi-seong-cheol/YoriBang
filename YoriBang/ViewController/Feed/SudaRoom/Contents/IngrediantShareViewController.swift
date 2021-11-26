@@ -48,7 +48,11 @@ class IngrediantShareViewController: UIViewController {
 }
 
 extension IngrediantShareViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name:"Detail", bundle: nil)
+        let pushVC = storyboard.instantiateViewController(withIdentifier: "PostDetailViewController")
+        self.navigationController?.pushViewController(pushVC, animated: true)
+    }
 }
 
 extension IngrediantShareViewController: UITableViewDataSource {
@@ -60,8 +64,11 @@ extension IngrediantShareViewController: UITableViewDataSource {
         guard let cell = ContentTableView.dequeueReusableCell(withIdentifier: ContentTableViewCell.identifier, for: indexPath) as? ContentTableViewCell else {
             return UITableViewCell()
         }
-
+        
         cell.configure()
+        let background = UIView()
+        background.backgroundColor = .clear
+        cell.selectedBackgroundView = background
         return cell
     }
 }

@@ -8,12 +8,24 @@
 import UIKit
 
 class AlleyViewController: UIViewController {
-    @IBOutlet weak var RecommendCollectionView: UICollectionView!
+    @IBOutlet weak var CollectionView: UICollectionView!
+    @IBOutlet weak var TitleLabel: UILabel!
+    @IBOutlet weak var SubTitle: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        RecommendCollectionView.delegate = self
-        RecommendCollectionView.dataSource = self
+        configure()
+    }
+    
+    func configure() {
+        // Set CollectionView
+        CollectionView.delegate = self
+        CollectionView.dataSource = self
+        
+        // Set Font
+        TitleLabel.font = UIFont.NotoSansCJKkr(type: .bold, size: 16)
+        SubTitle.font = UIFont.NotoSansCJKkr(type: .medium, size: 12)
     }
 }
 
@@ -34,7 +46,7 @@ extension AlleyViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = RecommendCollectionView.dequeueReusableCell(withReuseIdentifier: RecommendCollectionViewCell.identifier, for: indexPath) as? RecommendCollectionViewCell else {
+        guard let cell = CollectionView.dequeueReusableCell(withReuseIdentifier: RecommendCollectionViewCell.identifier, for: indexPath) as? RecommendCollectionViewCell else {
             return UICollectionViewCell()
         }
         cell.configure()
