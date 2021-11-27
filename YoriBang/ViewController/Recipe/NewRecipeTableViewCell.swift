@@ -35,9 +35,8 @@ class NewRecipeTableViewCell: UITableViewCell {
     }
     
     public func configure(with recipeModel: RecipeModel) {
-        let height =  ThumbNail.frame.height - 20
+        let height =  ThumbNail.frame.height
         let width = ThumbNail.frame.width
-//        CGFloat scale = UIScreen.main.scale
         self.ThumbNail.image = recipeModel.thumbNail.crop(rect: CGRect(x: 0, y: 0, width: width, height: height))
         self.TitleLabel.text = recipeModel.title
         self.Time.text = recipeModel.cookTime

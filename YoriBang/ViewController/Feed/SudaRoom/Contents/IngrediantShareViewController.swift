@@ -15,7 +15,10 @@ class IngrediantShareViewController: UIViewController {
         
         ContentTableView.delegate = self
         ContentTableView.dataSource = self
+        post = GetData.shared.getPost()
     }
+    
+    var post = [PostModel]()
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -57,7 +60,7 @@ extension IngrediantShareViewController: UITableViewDelegate {
 
 extension IngrediantShareViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return post.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,7 +68,7 @@ extension IngrediantShareViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.configure()
+        cell.configure(post[indexPath.row])
         let background = UIView()
         background.backgroundColor = .clear
         cell.selectedBackgroundView = background

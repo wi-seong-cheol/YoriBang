@@ -10,6 +10,7 @@ import UIKit
 import MaterialComponents.MaterialBottomSheet
 
 class RecipeDetailViewController: UIViewController {
+    @IBOutlet weak var ThumbNail: UIImageView!
     @IBOutlet weak var TableView: UITableView!
     @IBOutlet weak var TableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var Profile: UIImageView!
@@ -31,6 +32,7 @@ class RecipeDetailViewController: UIViewController {
     @IBOutlet weak var Ingredient: UILabel!
     var isTapped: Bool = false
     var selectedCellPath: IndexPath?
+    var step = [StepModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +47,10 @@ class RecipeDetailViewController: UIViewController {
     }
     
     func configure() {
+        let width = ThumbNail.frame.width
+        let height = ThumbNail.frame.height
+        ThumbNail.image = UIImage(named: "DetailImage")?.crop(rect: CGRect(x: 0, y: 0, width: width, height: height))
+        step = GetData.shared.getStep()
         // Set TableView
         TableView.delegate = self
         TableView.dataSource = self
@@ -131,7 +137,7 @@ extension RecipeDetailViewController: UITableViewDelegate {
 
 extension RecipeDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return step.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -149,8 +155,7 @@ extension RecipeDetailViewController: UITableViewDataSource {
                 cell.More.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
             })
         }
-        cell.Count.text = String( indexPath.row + 1)
-        cell.configure()
+        cell.configure(step[indexPath.row])
         let background = UIView()
         background.backgroundColor = .clear
         cell.selectedBackgroundView = background

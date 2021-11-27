@@ -42,6 +42,12 @@ class ContentTableViewCell: UITableViewCell {
         Comment.font = UIFont.NotoSansCJKkr(type: .regular, size: 8)
     }
     
-    public func configure() {
+    public func configure(_ post: PostModel) {
+        Profile.image = post.writer.profile
+        Nickname.text = post.writer.nickName
+        Content.text = post.content
+        Time.text = post.location + " " + String(post.create) + "분 전"
+        Like.text = String(post.like)
+        Comment.text = String(post.commet)
     }
 }

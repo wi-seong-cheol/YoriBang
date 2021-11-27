@@ -19,13 +19,19 @@ class ProfileRecipeTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func configure() {
+    func configure(_ recipe: RecipeModel) {
         // Set View
         BackView.layer.borderWidth = 1
         BackView.layer.cornerRadius = 5
         BackView.layer.borderColor = UIColor(red: 251, green: 201, blue: 196).cgColor
+        ThumbNail.layer.cornerRadius = 5
         
         // Set Font
-        TitleLabel.font = UIFont.NotoSansCJKkr(type: .medium, size: 103)
+        TitleLabel.font = UIFont.NotoSansCJKkr(type: .medium, size: 10)
+        
+        let width = ThumbNail.frame.width
+        let height = ThumbNail.frame.height
+        ThumbNail.image = recipe.thumbNail.crop(rect: CGRect(x: 0, y: 0, width: width, height: height))
+        TitleLabel.text = recipe.title
     }
 }

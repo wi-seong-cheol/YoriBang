@@ -18,12 +18,15 @@ class ProfileDiaryTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func configure() {
+    func configure(_ diary: RecipeModel) {
         // Set View
         BackView.layer.borderWidth = 1
         BackView.layer.cornerRadius = 5
         BackView.layer.borderColor = UIColor(red: 251, green: 201, blue: 196).cgColor
+        ThumbNail.layer.cornerRadius = 5
         
-        
+        let width = ThumbNail.frame.width
+        let height = ThumbNail.frame.height
+        ThumbNail.image = diary.thumbNail.crop(rect: CGRect(x: 0, y: 0, width: width, height: height))
     }
 }

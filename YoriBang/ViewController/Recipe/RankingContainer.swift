@@ -13,6 +13,7 @@ class RankingContainer: UIViewController {
     @IBOutlet weak var MonthRank: UIButton!
     @IBOutlet weak var DayRank: UIButton!
     @IBOutlet weak var More: UIButton!
+    var rank = [RankModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,8 @@ class RankingContainer: UIViewController {
     }
     
     func configure() {
+        rank = GetData.shared.getRank()
+        
         // TableView Set
         RankingCollectionView.delegate = self
         RankingCollectionView.dataSource = self
@@ -43,14 +46,14 @@ extension RankingContainer: UICollectionViewDelegate {
 
 extension RankingContainer: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return rank.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = RankingCollectionView.dequeueReusableCell(withReuseIdentifier: RankingCollectionViewCell.identifier, for: indexPath) as? RankingCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.configure()
+        cell.configure(rank[indexPath.row])
         
         cell.layer.shadowColor = UIColor.black.cgColor
         cell.layer.shadowOpacity =  0.16

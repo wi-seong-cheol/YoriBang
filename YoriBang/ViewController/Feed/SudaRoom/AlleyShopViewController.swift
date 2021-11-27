@@ -17,8 +17,11 @@ class AlleyViewController: UIViewController {
         
         configure()
     }
+    var alley = [AlleyShopModel]()
     
     func configure() {
+        alley = GetData.shared.getAlley()
+        
         // Set CollectionView
         CollectionView.delegate = self
         CollectionView.dataSource = self
@@ -42,14 +45,14 @@ extension AlleyViewController: UICollectionViewDelegate {
 // MARK: - UICollectionViewDataSource
 extension AlleyViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return alley.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = CollectionView.dequeueReusableCell(withReuseIdentifier: RecommendCollectionViewCell.identifier, for: indexPath) as? RecommendCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.configure()
+        cell.configure(alley[indexPath.row])
         
         cell.layer.shadowColor = UIColor.black.cgColor
         cell.layer.shadowOpacity =  0.16

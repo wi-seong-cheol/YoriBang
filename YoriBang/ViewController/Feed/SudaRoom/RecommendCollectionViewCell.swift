@@ -22,7 +22,7 @@ class RecommendCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    public func configure() {
+    public func configure(_ alley: AlleyShopModel) {
         ContentView.layer.cornerRadius = 5
         ContentView.layer.masksToBounds = true
         
@@ -32,5 +32,12 @@ class RecommendCollectionViewCell: UICollectionViewCell {
         Attention.font = UIFont.NotoSansCJKkr(type: .regular, size: 7)
         Comment.font = UIFont.NotoSansCJKkr(type: .regular, size: 7)
         
+        let height = RoomimageView.frame.height
+        let width = RoomimageView.frame.width
+        RoomimageView.image = alley.thumbNail.crop(rect: CGRect(x: 0, y: 0, width: width, height: height))
+        TitleLabel.text = alley.name
+        Content.text = alley.desc
+        Comment.text =  "리뷰 " + String(alley.review)
+        Attention.text = "관심 " + String(alley.like)
     }
 }

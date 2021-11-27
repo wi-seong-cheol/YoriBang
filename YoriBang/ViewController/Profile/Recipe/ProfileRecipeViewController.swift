@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileRecipeViewController: UIViewController {
     @IBOutlet weak var TableView: UITableView!
+    var recipe = [RecipeModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,7 @@ class ProfileRecipeViewController: UIViewController {
     }
     
     func configure() {
+        recipe = GetData.shared.getRecipe()
         // Set TableView
         TableView.delegate = self
         TableView.dataSource = self
@@ -33,7 +35,7 @@ extension ProfileRecipeViewController: UITableViewDelegate {
 //MARK: - UITableViewDataSource
 extension ProfileRecipeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return recipe.count
     }
     
     
@@ -42,7 +44,7 @@ extension ProfileRecipeViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.configure()
+        cell.configure(recipe[indexPath.row])
         let background = UIView()
         background.backgroundColor = .clear
         cell.selectedBackgroundView = background

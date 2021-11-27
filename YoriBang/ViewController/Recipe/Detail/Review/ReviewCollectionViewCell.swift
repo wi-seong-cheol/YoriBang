@@ -10,6 +10,7 @@ import UIKit
 
 class ReviewCollectionViewCell: UICollectionViewCell {
     static let identifier = "ReviewCollectionViewCell"
+    @IBOutlet weak var image: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

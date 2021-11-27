@@ -21,7 +21,7 @@ class StepTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func configure() {
+    func configure(_ stepModel: StepModel) {
         // Set Font
         Step.font = UIFont.Roboto(type: .medium, size: 12)
         Count.font = UIFont.Roboto(type: .medium, size: 12)
@@ -30,5 +30,9 @@ class StepTableViewCell: UITableViewCell {
         BackView.layer.borderColor = UIColor(red: 237, green: 237, blue: 242).cgColor
         BackView.layer.borderWidth = 1
         Desc.font = UIFont.NotoSansCJKkr(type: .regular, size: 12)
+        
+        Count.text = String(stepModel.step)
+        TitleLabel.text = stepModel.title
+        Desc.text = stepModel.desc
     }
 }

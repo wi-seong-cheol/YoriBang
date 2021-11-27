@@ -74,6 +74,10 @@
 		4DA055132743452D00B10507 /* AllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA055122743452D00B10507 /* AllViewController.swift */; };
 		4DA34C1D27516BFB007E9FF0 /* ScrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA34C1C27516BFB007E9FF0 /* ScrapViewController.swift */; };
 		4DA34C1F27516C07007E9FF0 /* ScrapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA34C1E27516C07007E9FF0 /* ScrapTableViewCell.swift */; };
+		4DA34C212751B30F007E9FF0 /* RankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA34C202751B30F007E9FF0 /* RankModel.swift */; };
+		4DA34C232751B819007E9FF0 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA34C222751B819007E9FF0 /* PostModel.swift */; };
+		4DA34C252751B8A4007E9FF0 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA34C242751B8A4007E9FF0 /* CommentModel.swift */; };
+		4DA34C272751BCEF007E9FF0 /* AlleyShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA34C262751BCEF007E9FF0 /* AlleyShopModel.swift */; };
 		4DA85E7727356DD800060CFF /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA85E7627356DD800060CFF /* AddViewController.swift */; };
 		4DBA5A2E274236E4003928AA /* EdgeShadowLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBA5A2D274236E4003928AA /* EdgeShadowLayer.swift */; };
 		4DBA5A30274243B1003928AA /* GowunDodum-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DBA5A2F274243B1003928AA /* GowunDodum-Regular.ttf */; };
@@ -85,6 +89,8 @@
 		4DBA5A3C27427F17003928AA /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DBA5A3B27427F17003928AA /* Roboto-Regular.ttf */; };
 		4DBA5A3E274293B5003928AA /* UploadRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBA5A3D274293B5003928AA /* UploadRecipeViewController.swift */; };
 		4DBB7D2027350E3E009F03D2 /* CustomizedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBB7D1F27350E3E009F03D2 /* CustomizedTabBar.swift */; };
+		4DBEA5112751DC6800C4F21A /* DetailRecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBEA5102751DC6800C4F21A /* DetailRecipeModel.swift */; };
+		4DBEA5132751DC9500C4F21A /* StepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBEA5122751DC9500C4F21A /* StepModel.swift */; };
 		4DC5306C27494818001E157C /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5306B27494818001E157C /* Storage.swift */; };
 		4DC5306E27494890001E157C /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5306D27494890001E157C /* SignViewController.swift */; };
 		4DC710292747BC4E005D6B09 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC710282747BC4E005D6B09 /* FAQTableViewCell.swift */; };
@@ -216,6 +222,10 @@
 		4DA055122743452D00B10507 /* AllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllViewController.swift; sourceTree = "<group>"; };
 		4DA34C1C27516BFB007E9FF0 /* ScrapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrapViewController.swift; sourceTree = "<group>"; };
 		4DA34C1E27516C07007E9FF0 /* ScrapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrapTableViewCell.swift; sourceTree = "<group>"; };
+		4DA34C202751B30F007E9FF0 /* RankModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankModel.swift; sourceTree = "<group>"; };
+		4DA34C222751B819007E9FF0 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		4DA34C242751B8A4007E9FF0 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		4DA34C262751BCEF007E9FF0 /* AlleyShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlleyShopModel.swift; sourceTree = "<group>"; };
 		4DA85E7627356DD800060CFF /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		4DBA5A2D274236E4003928AA /* EdgeShadowLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeShadowLayer.swift; sourceTree = "<group>"; };
 		4DBA5A2F274243B1003928AA /* GowunDodum-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GowunDodum-Regular.ttf"; sourceTree = "<group>"; };
@@ -227,6 +237,8 @@
 		4DBA5A3B27427F17003928AA /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		4DBA5A3D274293B5003928AA /* UploadRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UploadRecipeViewController.swift; path = "../New Group/UploadRecipeViewController.swift"; sourceTree = "<group>"; };
 		4DBB7D1F27350E3E009F03D2 /* CustomizedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedTabBar.swift; sourceTree = "<group>"; };
+		4DBEA5102751DC6800C4F21A /* DetailRecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecipeModel.swift; sourceTree = "<group>"; };
+		4DBEA5122751DC9500C4F21A /* StepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepModel.swift; sourceTree = "<group>"; };
 		4DC5306B27494818001E157C /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		4DC5306D27494890001E157C /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		4DC710282747BC4E005D6B09 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
@@ -611,6 +623,12 @@
 			children = (
 				4DC7687827514FAF000E5865 /* RecipeModel.swift */,
 				4DC7687C2751507A000E5865 /* UserModel.swift */,
+				4DA34C202751B30F007E9FF0 /* RankModel.swift */,
+				4DA34C222751B819007E9FF0 /* PostModel.swift */,
+				4DA34C242751B8A4007E9FF0 /* CommentModel.swift */,
+				4DA34C262751BCEF007E9FF0 /* AlleyShopModel.swift */,
+				4DBEA5102751DC6800C4F21A /* DetailRecipeModel.swift */,
+				4DBEA5122751DC9500C4F21A /* StepModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1065,6 +1083,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA34C252751B8A4007E9FF0 /* CommentModel.swift in Sources */,
 				4DE7ADB62743816200CAFB98 /* AlleyShopViewController.swift in Sources */,
 				4D92736427434BA700360CFB /* ContentTableViewCell.swift in Sources */,
 				4DBA5A3E274293B5003928AA /* UploadRecipeViewController.swift in Sources */,
@@ -1091,6 +1110,7 @@
 				4DD7A102274FCA6200B42D4D /* ProfileRecipeViewController.swift in Sources */,
 				4DC76883275168B4000E5865 /* UIBarBackButton.swift in Sources */,
 				4DA34C1D27516BFB007E9FF0 /* ScrapViewController.swift in Sources */,
+				4DBEA5112751DC6800C4F21A /* DetailRecipeModel.swift in Sources */,
 				4D6C27F0274409E900F2E1D6 /* RecipeTableViewCell.swift in Sources */,
 				4D92CA9E27342BB5004C4678 /* FeedViewController.swift in Sources */,
 				4DC7687F275151B8000E5865 /* GetData.swift in Sources */,
@@ -1105,6 +1125,7 @@
 				4D1697232747B40500E4C043 /* AlleyRadiusViewController.swift in Sources */,
 				4D15977627366A8400A430DB /* SearchViewController.swift in Sources */,
 				4DD7A0FE274FC8FF00B42D4D /* ProfileDiaryViewController.swift in Sources */,
+				4DA34C272751BCEF007E9FF0 /* AlleyShopModel.swift in Sources */,
 				4DA055132743452D00B10507 /* AllViewController.swift in Sources */,
 				4DC7687927514FAF000E5865 /* RecipeModel.swift in Sources */,
 				4D42D57F274BD39F00282208 /* OfficialViewController.swift in Sources */,
@@ -1122,6 +1143,7 @@
 				4D42D584274C047F00282208 /* CommentReivewViewController.swift in Sources */,
 				4DBA5A342742460C003928AA /* UIFont + Extension.swift in Sources */,
 				4D92CAA027342BBA004C4678 /* MyRoomViewController.swift in Sources */,
+				4DA34C212751B30F007E9FF0 /* RankModel.swift in Sources */,
 				4DC7688127516108000E5865 /* UIImage + Extension.swift in Sources */,
 				4D7903B2274C183C00E05600 /* ReviewViewController.swift in Sources */,
 				4DA34C1F27516C07007E9FF0 /* ScrapTableViewCell.swift in Sources */,
@@ -1129,6 +1151,7 @@
 				4DA0550D2743449E00B10507 /* IngrediantShareViewController.swift in Sources */,
 				4DCDBA302742A1B200AA10FE /* IngrediantSearchViewController.swift in Sources */,
 				4DE7ADB8274382C300CAFB98 /* RecommendCollectionViewCell.swift in Sources */,
+				4DA34C232751B819007E9FF0 /* PostModel.swift in Sources */,
 				4D92CA3F2733AA6B004C4678 /* AppDelegate.swift in Sources */,
 				4D92CA9627340DF3004C4678 /* TabBarViewController.swift in Sources */,
 				4DA0550F274344AF00B10507 /* EattingRoomViewController.swift in Sources */,
@@ -1139,6 +1162,7 @@
 				4D029F4A2735476A009AB8C6 /* CALayer + Extension.swift in Sources */,
 				4D42D579274BB8DE00282208 /* StepTableViewCell.swift in Sources */,
 				4D92CA822733AFFC004C4678 /* NetworkInterceptorProvider.swift in Sources */,
+				4DBEA5132751DC9500C4F21A /* StepModel.swift in Sources */,
 				4DCDBA342742AA3F00AA10FE /* MenuCell.swift in Sources */,
 				4DC710292747BC4E005D6B09 /* FAQTableViewCell.swift in Sources */,
 				4DCE7CE1274C9134009AF3F5 /* ReviewCollectionViewCell.swift in Sources */,

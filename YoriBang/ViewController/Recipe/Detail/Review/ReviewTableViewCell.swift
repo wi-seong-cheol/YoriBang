@@ -21,6 +21,11 @@ class ReviewTableViewCell: UITableViewCell {
     var delegate: CVCellDelegate?
     @IBOutlet weak var CollectionView: UICollectionView!
     
+    var reviewImages: [UIImage] = [
+        UIImage(named: "Image5") ?? UIImage(),
+        UIImage(named: "Image6") ?? UIImage()
+    ]
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -47,13 +52,16 @@ class ReviewTableViewCell: UITableViewCell {
 
 extension ReviewTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = CollectionView.dequeueReusableCell(withReuseIdentifier: ReviewCollectionViewCell.identifier, for: indexPath) as? ReviewCollectionViewCell else {
             return UICollectionViewCell()
         }
+        let width = cell.image.frame.width
+        let height = cell.image.frame.height
+        cell.image.image = reviewImages[indexPath.row].crop(rect: CGRect(x: 0, y: 0, width: width, height: height))
         return cell
     }
 }

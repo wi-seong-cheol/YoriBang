@@ -23,6 +23,7 @@ class MyRoomViewController: UIViewController {
     @IBOutlet weak var Like: UILabel!
     @IBOutlet weak var Badge: UILabel!
     @IBOutlet weak var Setting: UILabel!
+    @IBOutlet var Category: [UIView]!
     
     private let BackView: UIView = {
         let view = UIView()
@@ -79,8 +80,11 @@ class MyRoomViewController: UIViewController {
         Profile.layer.borderWidth = 1
         
         // Set Event
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.goPage(sender:)))
-        self.ProfileView.addGestureRecognizer(gesture)
+        for category in Category {
+            let gesture = UITapGestureRecognizer(target: self, action: #selector(self.goPage(sender:)))
+            category.addGestureRecognizer(gesture)
+        }
+        
     }
     
     @objc func didTapOnMyViewButton(gesture: CustomGesture) {

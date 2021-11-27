@@ -13,6 +13,7 @@ class ReviewViewController: UIViewController {
     @IBOutlet weak var TableView: UITableView!
     @IBOutlet weak var WriteReview: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,7 +44,7 @@ extension ReviewViewController: UITableViewDelegate {
 
 extension ReviewViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

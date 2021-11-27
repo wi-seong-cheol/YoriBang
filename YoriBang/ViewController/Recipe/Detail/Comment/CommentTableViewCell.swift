@@ -35,7 +35,11 @@ class CommentTableViewCell: UITableViewCell {
         Reply.titleLabel?.font = UIFont.NotoSansCJKkr(type: .regular, size: 9)
     }
     
-    func configure() {
+    func configure(_ commentModel: CommentModel) {
+        Profile.image = commentModel.writer.profile
+        Nickname.text = commentModel.writer.nickName
+        Time.text = commentModel.create + "분 전"
+        Content.text = commentModel.content
         
     }
 }
