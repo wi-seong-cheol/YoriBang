@@ -6,7 +6,7 @@
   <img src="https://github.com/wi-seong-cheol/yoribang-iOS/blob/main/YoriBang/Assets.xcassets/AppIcon.appiconset/180.png" alt="text" width="number" />
 </p>
 <div align="center">
-  ![#f03c15](모두와 함께하는 요리, 이웃과 함께하는 홈쿡)
+  모두와 함께하는 요리, 이웃과 함께하는 홈쿡
 </div>
 
 <br></br>
