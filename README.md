@@ -1,6 +1,6 @@
 # Yoribang
 <br></br>
-### 01. 어플 소개
+### 어플 소개
 ***
 <p align="center">
   <img src="https://github.com/wi-seong-cheol/yoribang-iOS/blob/main/YoriBang/Assets.xcassets/AppIcon.appiconset/180.png" alt="text" width="number" />
