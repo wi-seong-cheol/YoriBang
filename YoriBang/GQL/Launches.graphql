@@ -1,51 +1,7 @@
-query Launches {
-	launches {
-		cursor
-		hasMore
-	}
+mutation SendVerificationCode($input: SendVerificationCodeInput){
+  sendVerificationCode(input: $input)
 }
 
-query Launch($id: ID!){
-	launch(id: $id) {
-		id
-		site
-		mission {
-			name
-			missionPatch
-		}
-		rocket {
-			id
-			name
-			type
-		}
-		isBooked
-	}
-}
-
-query Me {
-	me {
-		id
-	}
-}
-#
-#query TripsBooked {
-#	tripsBooked
-#}
-
-mutation BookTrips($id: ID) {
-	bookTrips(launchIds: [$id]) {
-		success
-		message
-	}
-}
-
-mutation CancelTrips($id: ID!) {
-	cancelTrip(launchId: $id) {
-		success
-		message
-	}
-}
-
-mutation Login($email: String) {
-	login(email: $email)
+mutation Login($input: LoginInput){
+  login(input: $input)
 }
