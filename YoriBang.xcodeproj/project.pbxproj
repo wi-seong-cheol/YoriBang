@@ -38,10 +38,11 @@
 		4D42D57F274BD39F00282208 /* OfficialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D42D57E274BD39F00282208 /* OfficialViewController.swift */; };
 		4D42D581274BD3A900282208 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D42D580274BD3A900282208 /* CountryViewController.swift */; };
 		4D42D584274C047F00282208 /* CommentReivewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D42D583274C047F00282208 /* CommentReivewViewController.swift */; };
+		4D6B8F0D2864107600478BB6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6B8F0C2864107600478BB6 /* API.swift */; };
+		4D6B8F0E2864119F00478BB6 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D26FE7728640BF300BD6976 /* NotoSansCJKkr-Regular.otf */; };
 		4D6BFFB72736C45700B0517F /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BFFB62736C45700B0517F /* JoinViewController.swift */; };
 		4D6C27EE2744082800F2E1D6 /* AllRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C27ED2744082800F2E1D6 /* AllRecipeViewController.swift */; };
 		4D6C27F0274409E900F2E1D6 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C27EF274409E900F2E1D6 /* RecipeTableViewCell.swift */; };
-		4D783A2E274FEA8900212AC4 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D783A2D274FEA8900212AC4 /* API.swift */; };
 		4D783A30274FF75E00212AC4 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D783A2F274FF75E00212AC4 /* DataSource.swift */; };
 		4D7903AE274C0CD800E05600 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7903AD274C0CD800E05600 /* CommentViewController.swift */; };
 		4D7903B0274C0DB600E05600 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7903AF274C0DB600E05600 /* CommentTableViewCell.swift */; };
@@ -106,7 +107,6 @@
 		4DCDBA382742AB4200AA10FE /* FocusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DCDBA372742AB4200AA10FE /* FocusView.xib */; };
 		4DCDBA3A2742B93A00AA10FE /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DCDBA392742B93A00AA10FE /* Roboto-Medium.ttf */; };
 		4DCE7CE1274C9134009AF3F5 /* ReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCE7CE0274C9134009AF3F5 /* ReviewCollectionViewCell.swift */; };
-		4DD0EE3D2749FE2A00477068 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DD0EE3B2749FE2600477068 /* NotoSansCJKkr-Regular.otf */; };
 		4DD0EE3E2749FE2A00477068 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DD0EE3C2749FE2900477068 /* NotoSansCJKkr-Medium.otf */; };
 		4DD7A0FA274FBF9F00B42D4D /* Launches.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 4DD7A0F9274FBF9F00B42D4D /* Launches.graphql */; };
 		4DD7A0FE274FC8FF00B42D4D /* ProfileDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD7A0FD274FC8FF00B42D4D /* ProfileDiaryViewController.swift */; };
@@ -168,6 +168,7 @@
 		4D1697202747A77F00E4C043 /* MyRoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRoomTableViewController.swift; sourceTree = "<group>"; };
 		4D1697222747B40500E4C043 /* AlleyRadiusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlleyRadiusViewController.swift; sourceTree = "<group>"; };
 		4D1697252747B88E00E4C043 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		4D26FE7728640BF300BD6976 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
 		4D34BDCE27504DA7004ADA0B /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		4D34BDD027504DB3004ADA0B /* NoticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewCell.swift; sourceTree = "<group>"; };
 		4D34BDD2275052D1004ADA0B /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
@@ -179,11 +180,11 @@
 		4D42D57E274BD39F00282208 /* OfficialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialViewController.swift; sourceTree = "<group>"; };
 		4D42D580274BD3A900282208 /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
 		4D42D583274C047F00282208 /* CommentReivewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentReivewViewController.swift; sourceTree = "<group>"; };
+		4D6B8F0C2864107600478BB6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4D6BFFB62736C45700B0517F /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		4D6BFFB82736C50600B0517F /* YoriBang.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YoriBang.entitlements; sourceTree = "<group>"; };
 		4D6C27ED2744082800F2E1D6 /* AllRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRecipeViewController.swift; sourceTree = "<group>"; };
 		4D6C27EF274409E900F2E1D6 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
-		4D783A2D274FEA8900212AC4 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4D783A2F274FF75E00212AC4 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		4D7903AD274C0CD800E05600 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		4D7903AF274C0DB600E05600 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
@@ -254,7 +255,6 @@
 		4DCDBA372742AB4200AA10FE /* FocusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusView.xib; sourceTree = "<group>"; };
 		4DCDBA392742B93A00AA10FE /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		4DCE7CE0274C9134009AF3F5 /* ReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewCell.swift; sourceTree = "<group>"; };
-		4DD0EE3B2749FE2600477068 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansCJKkr-Regular.otf"; path = "../../../../../Library/Fonts/NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
 		4DD0EE3C2749FE2900477068 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		4DD7A0F9274FBF9F00B42D4D /* Launches.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Launches.graphql; sourceTree = "<group>"; };
 		4DD7A0FD274FC8FF00B42D4D /* ProfileDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDiaryViewController.swift; sourceTree = "<group>"; };
@@ -505,7 +505,6 @@
 				4D92CA742733AB8F004C4678 /* GQL */,
 				4D92CA722733AB7F004C4678 /* ViewController */,
 				4D92CA862733B1C6004C4678 /* Model */,
-				4D92CA872733B1CD004C4678 /* Realm */,
 				4D92CA762733ABB8004C4678 /* Util */,
 				4D92CA732733AB8A004C4678 /* Extension */,
 				4D92CA892733B22D004C4678 /* Delegate */,
@@ -586,7 +585,7 @@
 			isa = PBXGroup;
 			children = (
 				4D34BDD2275052D1004ADA0B /* schema.json */,
-				4D783A2D274FEA8900212AC4 /* API.swift */,
+				4D6B8F0C2864107600478BB6 /* API.swift */,
 				4DD7A0F9274FBF9F00B42D4D /* Launches.graphql */,
 				4D92CA7B2733AFAA004C4678 /* Network.swift */,
 				4D92CA752733ABB0004C4678 /* API */,
@@ -633,13 +632,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4D92CA872733B1CD004C4678 /* Realm */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Realm;
-			sourceTree = "<group>";
-		};
 		4D92CA882733B1FA004C4678 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -648,7 +640,7 @@
 				4DBA5A3B27427F17003928AA /* Roboto-Regular.ttf */,
 				4DCDBA392742B93A00AA10FE /* Roboto-Medium.ttf */,
 				4DD0EE3C2749FE2900477068 /* NotoSansCJKkr-Medium.otf */,
-				4DD0EE3B2749FE2600477068 /* NotoSansCJKkr-Regular.otf */,
+				4D26FE7728640BF300BD6976 /* NotoSansCJKkr-Regular.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -918,7 +910,6 @@
 				4DCDBA362742AA7100AA10FE /* MenuCell.xib in Resources */,
 				4DBA5A30274243B1003928AA /* GowunDodum-Regular.ttf in Resources */,
 				4D15977C27366BA900A430DB /* Feed.storyboard in Resources */,
-				4DD0EE3D2749FE2A00477068 /* NotoSansCJKkr-Regular.otf in Resources */,
 				4DBA5A322742442A003928AA /* NotoSansCJKkr-Bold.otf in Resources */,
 				4D15977827366AF300A430DB /* Recipe.storyboard in Resources */,
 				4D34BDD3275052D1004ADA0B /* schema.json in Resources */,
@@ -937,6 +928,7 @@
 				4DCDBA382742AB4200AA10FE /* FocusView.xib in Resources */,
 				4DD7A0FA274FBF9F00B42D4D /* Launches.graphql in Resources */,
 				4D92CA462733AA6B004C4678 /* Main.storyboard in Resources */,
+				4D6B8F0E2864119F00478BB6 /* NotoSansCJKkr-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -959,22 +951,22 @@
 /* Begin PBXShellScriptBuildPhase section */
 		4D92CA8E2733B452004C4678 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/YoriBang/GQL/*.graphql",
+				"$(SRCROOT)/YoriBang/**/*.graphql",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/YoriBang/API.swift",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"/GQL/\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"/\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n";
 		};
 		5794AE9D78221AA9E6641E64 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1044,7 +1036,7 @@
 		};
 		884F7F5658C5738A8EAE72BA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -1121,6 +1113,7 @@
 				4D92CA432733AA6B004C4678 /* RecipeViewController.swift in Sources */,
 				4D92CA842733B010004C4678 /* UserManagementInterceptor.swift in Sources */,
 				4DC5306E27494890001E157C /* SignViewController.swift in Sources */,
+				4D6B8F0D2864107600478BB6 /* API.swift in Sources */,
 				4D1697262747B88E00E4C043 /* FAQViewController.swift in Sources */,
 				4D1697232747B40500E4C043 /* AlleyRadiusViewController.swift in Sources */,
 				4D15977627366A8400A430DB /* SearchViewController.swift in Sources */,
@@ -1155,7 +1148,6 @@
 				4D92CA3F2733AA6B004C4678 /* AppDelegate.swift in Sources */,
 				4D92CA9627340DF3004C4678 /* TabBarViewController.swift in Sources */,
 				4DA0550F274344AF00B10507 /* EattingRoomViewController.swift in Sources */,
-				4D783A2E274FEA8900212AC4 /* API.swift in Sources */,
 				4DD7A100274FC9EA00B42D4D /* ProfileDiaryTableViewCell.swift in Sources */,
 				4D42D581274BD3A900282208 /* CountryViewController.swift in Sources */,
 				4DBA5A3627424F11003928AA /* CustomGesture.swift in Sources */,
