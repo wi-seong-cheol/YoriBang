@@ -1,7 +1,0 @@
-mutation SendVerificationCode($input: SendVerificationCodeInput){
-  sendVerificationCode(input: $input)
-}
-
-mutation Login($input: LoginInput){
-  login(input: $input)
-}
